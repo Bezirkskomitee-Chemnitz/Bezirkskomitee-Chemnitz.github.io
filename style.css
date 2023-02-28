@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  background-color: #111;
+  color: #eee;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 12pt;
+}
+
+picture>img {
+  width: 100%;
+}
+
+a {
+  color: #aaa;
+}
+
+a:hover,
+a:active,
+a:visited,
+a:focus {
+  color: #ccc;
+}
+
+h2 a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* custom style classes */
+
+.row {
+  display: flex;
+}
+
+.row>:not(:last-child) {
+  margin-right: 1em;
+}
+
+/* custom structures */
+
+ul.preview-cards {
+  padding: 0;
+  list-style-type: none;
+}
+
+.preview-cards>.row {
+  align-items: flex-start;
+  border: 1.5px solid #aaa;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.preview-cards>.row:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+
+.preview-cards>.row>picture {
+  height: 100%;
+  width: 33.33%;
+  margin-right: 1em;
+}
+
+.preview-cards>.row>picture>img {
+  border-radius: 10px;
+}
+
+.preview-cards>.row>article {
+  flex: 1;
+}
+
+.preview-cards>.row>article>p {
+  margin: 1em auto;
+}
+
+.preview-cards>.row>article>h3 {
+  margin: 0.5em auto;
+}
+
+/* style (adjustments) for different screen sizes */
+
+main {
+  margin: auto;
+  width: 80vw;
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    width: 95%;
+  }
+
+  .preview-cards>.row {
+    margin: 0.5em;
+    padding: 0.5em;
+  }
+
+  .preview-cards>.row>picture {
+    width: 40%;
+    margin-right: 0.5em;
+  }
+
+  .preview-cards>.row>article>p {
+    margin: 0.5em auto;
+  }
+
+  .preview-cards>.row>article>h3 {
+    margin: 0 auto;
+  }
+}
+
+/* ai generated */
+
+/* for debugging */
+
+* {
+  outline: 1px solid red;
+}
