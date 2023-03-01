@@ -22,15 +22,39 @@ youtube_username:
 rss:
 
 # analytics
-google_analytics: UA-NNNNNNNN-N
+google_analytics:
 
-# navigation
-navigation:
-  - Mathematik
-  - Physik
-  - Chemie
-  - Biologie
+# main navigation
+faculty_navigation:
+  - name: Mathematik
+  - name: Physik
+  - name: Chemie
+    external_url: https://www.tu-chemnitz.de/chemie/stoeck/
+  - name: Biologie
+    external_url: https://www.ipn.uni-kiel.de/aktuell/ibo/ibo_web1.htm
 
-# settings
+# custom settings
 dark_mode: true
 date_format: "%d.%m.%Y"
+
+# kramdown settings
+kramdown:
+  header_offset: 1
+
+# page defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  
+  - scope:
+      path: "pages/mathematik/*"
+    values:
+      layout: "default"
+      faculty: "mathematik"
+  - scope:
+      path: "pages/physik/*"
+    values:
+      layout: "default"
+      faculty: "physik"
