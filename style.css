@@ -19,23 +19,22 @@
   --green: #859900;
 }
 
-/* schemes */
+/* apply scheme */
 
 html,
 html[data-theme*="light"] {
   --text-color: var(--base00);
   --background-color: var(--base3);
   --border-color: var(--base1);
-  --highlight-color: var(--blue);
-  --focus-color: var(--cyan);
-  --title-color: var(--green);
-  --heading-color: var(--orange);
 }
 
 html[data-theme*="dark"] {
   --text-color: var(--base0);
   --background-color: var(--base03);
   --border-color: var(--base01);
+}
+
+html {
   --highlight-color: var(--blue);
   --focus-color: var(--cyan);
   --title-color: var(--green);
