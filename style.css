@@ -66,15 +66,15 @@ picture>img {
   height: auto;
 }
 
-a {
+a,
+a:active,
+a:focus,
+a:visited {
   color: var(--highlight-color);
   text-decoration: none;
 }
 
-a:hover,
-a:active,
-a:visited,
-a:focus {
+a:hover {
   color: var(--focus-color);
 }
 
@@ -83,11 +83,8 @@ a.inherit {
   text-decoration: inherit;
 }
 
-a[onclick] {
-  cursor: pointer;
-}
-
 h1 {
+  margin-top: 0;
   color: var(--title-color);
 }
 
@@ -112,6 +109,21 @@ header>nav>.row {
   align-items: center;
 }
 
+footer {
+  margin-bottom: 1em;
+  justify-content: center;
+}
+
+/* attribute dependent styles */
+
+[hidden] {
+  display: none;
+}
+
+[onclick] {
+  cursor: pointer;
+}
+
 /* custom style classes */
 
 .row {
@@ -122,9 +134,23 @@ header>nav>.row {
   margin-right: 1em;
 }
 
+.fixed {
+  position: fixed;
+}
+
+.theme-selector {
+  top: 5px;
+  left: 5px;
+}
+
+.scroll-up {
+  bottom: 5px;
+  right: 5px;
+}
+
 /* remove default style */
 
-nav>ul,
+ul.row,
 ul.posts {
   padding: 0;
   list-style-type: none;
@@ -173,8 +199,7 @@ html[data-theme*="dark"] .posts>.row {
 
 /* style (adjustments) for different screen sizes */
 
-header,
-main {
+body {
   margin-left: auto;
   margin-right: auto;
   width: 80vw;
@@ -183,8 +208,7 @@ main {
 
 @media screen and (max-width: 1000px) {
 
-  header,
-  main {
+  body {
     width: 95%;
   }
 
@@ -209,8 +233,7 @@ main {
 
 @media screen and (max-width: 600px) {
 
-  header,
-  main {
+  body {
     width: 98%;
   }
 
@@ -219,16 +242,8 @@ main {
   }
 }
 
-/* ai generated */
-
 /* for debugging */
 
 * {
-  /* outline: 1px solid red; */
-}
-
-/* important styles */
-
-[hidden] {
-  display: none;
+  outline: 1px solid red;
 }
