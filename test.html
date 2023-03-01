@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="dark">
 
 <head>
   <title>Bezirkskomitee Chemnitz</title>
@@ -17,6 +17,17 @@
 </head>
 
 <body>
+  <div class="theme-selector">
+    <a onclick>dark</a>
+    <script defer>
+      $(".theme-selector a[onclick]").bind("load click touch", (evt) => {
+        var theme = ($("html").attr("data-theme") === "dark" ? "light" : "dark");
+        $(evt.target).html(theme);
+        $("html").attr("data-theme", theme);
+      });
+    </script>
+  </div>
+
   <header class="row">
     <h1>
       <a href="/" class="inherit">Bezirkskomitee Chemnitz</a>
@@ -24,10 +35,10 @@
 
     <nav>
       <ul class="row">
-        <li><a href="/mathematik/" class="inherit">Mathematik</a></li>
-        <li><a href="/physik/" class="inherit">Physik</a></li>
-        <li><a href="/chemie/" class="inherit">Chemie</a></li>
-        <li><a href="/biologie/" class="inherit">Biologie</a></li>
+        <li><a href="/mathematik/">Mathematik</a></li>
+        <li><a href="/physik/">Physik</a></li>
+        <li><a href="/chemie/">Chemie</a></li>
+        <li><a href="/biologie/">Biologie</a></li>
       </ul>
     </nav>
   </header>
