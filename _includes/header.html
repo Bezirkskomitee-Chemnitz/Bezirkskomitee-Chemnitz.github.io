@@ -1,14 +1,16 @@
 <header class="row">
   <h1>
-    <a href="{{ site.baseurl }}/" class="inherit">Bezirkskomitee Chemnitz</a>
+    <a href="{{ site.baseurl }}/" class="inherit">{{ site.title }}</a>
   </h1>
 
   <nav>
     <ul class="row">
-      {% for name in site.navigation %}
-        <li>
-          <a href="{{ name | downcase | replace: ' ', '-' | relative_url }}/">{{ name }}</a>
-        </li>
+      {% for faculty in site.faculty_navigation %}
+      <li>
+        {% assign url = faculty.name | downcase | replace: ' ', '-' | relative_url | append: '/' %}
+        <a href="{{ faculty.external_url | default: url  }}" {% if faculty.external_url %}target="_blank" {% endif %}>{{
+          faculty.name }}</a>
+      </li>
       {% endfor %}
     </ul>
   </nav>
