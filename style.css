@@ -88,7 +88,11 @@ h1 {
   color: var(--title-color);
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--heading-color);
 }
 
@@ -245,5 +249,5 @@ body {
 /* for debugging */
 
 * {
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
