@@ -41,6 +41,13 @@ html {
   --heading-color: var(--orange);
 }
 
+/* other variables */
+
+html {
+  --animate-all: all 200ms ease-in-out;
+  --animate-all-fast: all 100ms ease-in-out;
+}
+
 /* general style */
 
 * {
@@ -72,6 +79,7 @@ a:focus,
 a:visited {
   color: var(--highlight-color);
   text-decoration: none;
+  transition: var(--animate-all-fast);
 }
 
 a:hover {
