@@ -31,5 +31,6 @@ navigation:
   - Chemie
   - Biologie
 
-# default dark mode
+# settings
 dark_mode: true
+date_format: "%d.%m.%Y"
