@@ -5,11 +5,11 @@
 
   <nav>
     <ul class="row">
-      {%- for name in site.navigation -%}
+      {% for name in site.navigation %}
         <li>
           <a href="{{ name | downcase | replace: ' ', '-' | relative_url }}/">{{ name }}</a>
         </li>
-      {%- endfor -%}
+      {% endfor %}
     </ul>
   </nav>
 </header>
