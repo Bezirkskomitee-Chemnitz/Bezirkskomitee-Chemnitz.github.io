@@ -1,48 +1,17 @@
 <ul class="posts">
+  {%- for post in site.data.posts -%}
   <li class="row">
     <picture>
-      <img
-        src="https://images.pexels.com/photos/14923594/pexels-photo-14923594.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
+      <img src="{{ post.thumbnail }}">
     </picture>
     <article>
-      <h3>Lorem Ipsum Post 1</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum.
-      </p>
+      <h3>{{ post.title }}</h3>
+      <p>{{ post.description }}</p>
       <div class="row">
-        <time datetime="2023-02-28">28.02.2023</time>
-        <a href="lorem-ipsum-post-1.html">Mehr lesen</a>
+        <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%d.%m.%Y' }}</time>
+        <a href="{{ post.url }}">Mehr lesen</a>
       </div>
     </article>
   </li>
-
-  <li class="row">
-    <picture>
-      <img
-        src="https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
-    </picture>
-    <article>
-      <h3>Dolor Sit Amet Post 2</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum.
-      </p>
-      <div class="row">
-        <time datetime="2023-01-20">20.01.2023</time>
-        <a href="dolor-sit-amet-post-2.html">Mehr lesen</a>
-      </div>
-    </article>
-  </li>
+  {%- endfor -%}
 </ul>
