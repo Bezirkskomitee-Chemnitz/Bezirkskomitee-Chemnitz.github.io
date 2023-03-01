@@ -7,7 +7,7 @@
     </picture>
     <article>
       <h3>{{ post.title }}</h3>
-      <p>{{ post.description }}</p>
+      <p>{{ post.description | truncate: 500 }}</p>
       <div class="row">
         {% assign date_format = site.date_format | default: '%d.%m.%Y' %}
         <time datetime="{{ post.date | date: '%Y-%m-%d %H:%M' }}">{{ post.date | date: date_format }}</time>

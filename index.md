@@ -1,6 +1,7 @@
 ---
 layout: default
 permalink: /
+date: 2023-03-01
 ---
 
 {% include anchor.html content="Was finden Sie hier?" tag="h2" class="inherit" %}
