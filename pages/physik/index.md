@@ -5,12 +5,12 @@ permalink: /physik/
 
 # Fördermaßnahmen im Fach Physik
 
-## 1. Sächsische Physikolympiade
+## Sächsische Physikolympiade
 
 [Hier](http://www.lzphysik-chemnitz.de/) geht es zum **Verein zur Förderung der Sächsischen Physikolympiade e.V.**
 mit Möglichkeit des Aufgabendownloads (1.Stufe / Hausaufgabenwettbewerb).
 
-## 2. Sommerschule Physik
+## Sommerschule Physik
 
 Die Sommerschule umfasst einen Zeitraum von zwei Tagen und findet jährlich gegen Ende des Schuljahres an der TU Chemnitz
 statt. Vorrangig richtet sich das Angebot an Schüler der Jahrgangsstufe 11, die Leistungskurse im Fach Physik belegen.
@@ -21,7 +21,7 @@ Bildungsagenturt Chemnitz den Gymnasien und Einrichtungen des Zweiten Bildungswe
 Teilnehmer wählen im Vorfeld die Experimente aus und arbeiten dann in Kleingruppen zusammen.
 Den Abschluss der Sommerschule bildet eine Vorlesung zu aktuellen Erkenntnissen der Physik oder Astrophysik.
 
-## 3. Korrespondenzzirkel Physik
+## Korrespondenzzirkel Physik
 
 Dieser Zirkel soll allen interessierten Schülern ab Klassenstufe 9 die Möglichkeit bieten, sich mit physikalischen
 Problemen auseinanderzusetzen. Dabei geht es nicht vorrangig um streng mathematische Abhandlungen, sondern um die
@@ -31,7 +31,7 @@ Lösungen bleibt ein Zeitraum von drei Monaten. Die Aufgaben werden korrigiert u
 Sollte es während des Zeitraums der Bearbeitung Fragen geben, steht Herr Dr. Berger (TU Chemnitz) als Ansprechpartner
 zur Verfügung.
 
-### Ansprechpartner:
+#### Ansprechpartner:
 
 Herr Dr. Berger<br>
 E-Mail: {% include email.html email="berger@physik.tu-chemnitz.de" %}
