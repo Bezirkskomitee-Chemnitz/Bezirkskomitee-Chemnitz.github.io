@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'de' }}">
+<html
+  lang="{{ page.language | default: site.language | default: 'de' }}"
+  data-theme="{%- if site.dark_mode -%}dark{%- else -%}light{%- endif -%}">
 
   {%- include head.html -%}
 
   <body>
-
     {%- include header.html -%}
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+    <main>
+      {{ content }}
     </main>
 
     {%- include footer.html -%}
 
+    <a href="#" class="scroll-up fixed inherit">
+      <i class="fa fa-arrow-up"></i>
+    </a>
   </body>
 
 </html>
