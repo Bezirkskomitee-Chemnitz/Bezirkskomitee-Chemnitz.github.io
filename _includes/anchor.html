@@ -1,0 +1,4 @@
+{% assign anchor_id = include.content | downcase | replace: ' ', '-' %}
+<{{ include.tag }} id="{{ anchor_id }}" {{ include.attr }}>
+    <a href="#{{ anchor_id }}" class="{{ include.class }}">{{ include.content }}</a>
+</{{ include.tag }}>
