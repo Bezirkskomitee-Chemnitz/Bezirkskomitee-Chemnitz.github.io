@@ -1,4 +1,9 @@
-<footer class="row">
-  <a href="{{ 'datenschutz/' | relative_url }}">Datenschutz</a>
-  <a href="{{ 'impressum/' | relative_url }}">Impressum</a>
+<footer>
+  <div>
+    <a href="{{ 'datenschutz/' | relative_url }}">Datenschutz</a> &amp;
+    <a href="{{ 'impressum/' | relative_url }}">Impressum</a>
+  </div>
+
+  {% assign date_format = site.date_format | default: '%d.%m.%Y' %}
+  {% if page.date %}Zuletzt bearbeitet am {{ page.date | date: date_format }}{% endif %}
 </footer>
