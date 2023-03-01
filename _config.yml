@@ -6,18 +6,19 @@ description: >-
   Bezirkskomitee Chemnitz
   zur Förderung mathematisch-naturwissenschaftlich
   begabter und interessierter Schüler
+keywords: bezirkskomitee, chemnitz, olympiaden
+language: de
 baseurl: "/bezirkskomitee-chemnitz" # the subpath of your site, e.g. /blog
 url: "https://fabianbartl.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: fabianbartl
 
 # build settings
-theme: minima
+theme: minima # modified
 plugins:
   - jekyll-feed
 
 # social badges
 github_username: fabianbartl
-instagram_username:
 youtube_username:
 rss:
 
@@ -30,3 +31,6 @@ navigation:
   - Physik
   - Chemie
   - Biologie
+
+# default dark mode
+dark_mode: true
