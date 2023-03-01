@@ -114,8 +114,17 @@ header>nav>.row {
 }
 
 footer {
+  margin-top: 2.5em;
   margin-bottom: 1em;
+  padding-top: 10vh;
+  text-align: center;
+}
+
+footer>.row {
   justify-content: center;
+}
+footer>.row>:not(:last-child) {
+  margin-right: 0.5em;
 }
 
 /* attribute dependent styles */
