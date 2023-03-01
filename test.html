@@ -17,16 +17,14 @@
 </head>
 
 <body>
-  <div class="theme-selector">
-    <a onclick>dark</a>
-    <script defer>
-      $(".theme-selector a[onclick]").bind("load click touch", (evt) => {
-        var theme = ($("html").attr("data-theme") === "dark" ? "light" : "dark");
-        $(evt.target).html(theme);
-        $("html").attr("data-theme", theme);
-      });
-    </script>
-  </div>
+  <div class="theme-selector fixed" onclick>dark</div>
+  <script defer>
+    $(".theme-selector[onclick]").bind("load click touch", (evt) => {
+      var theme = ($("html").attr("data-theme") === "dark" ? "light" : "dark");
+      $(evt.target).html(theme);
+      $("html").attr("data-theme", theme);
+    });
+  </script>
 
   <header class="row">
     <h1>
@@ -73,7 +71,7 @@
             anim id est laborum.
           </p>
           <div class="row">
-            <div class="date">28.02.2023</div>
+            <time>28.02.2023</time>
             <a href="lorem-ipsum-post-1.html">Mehr lesen</a>
           </div>
         </article>
@@ -98,7 +96,7 @@
             qui officia deserunt mollit anim id est laborum.
           </p>
           <div class="row">
-            <div class="date">20.01.2023</div>
+            <time>20.01.2023</time>
             <a href="dolor-sit-amet-post-2.html">Mehr lesen</a>
           </div>
         </article>
@@ -106,9 +104,14 @@
     </ul>
   </main>
 
-  <footer>
-
+  <footer class="row">
+    <a href="/datenschutz/">Datenschutz</a>
+    <a href="/impressum/">Impressum</a>
   </footer>
+
+  <a href="#" class="scroll-up fixed inherit">
+    <i class="fa fa-arrow-up"></i>
+  </a>
 </body>
 
 </html>
