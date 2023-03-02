@@ -9,7 +9,8 @@
 
       {% if entry.url or entry.external_url %}
       {% assign url = entry.url | prepend: baseurl %}
-      {% include smart_link.html content=entry.title url=url external_url=entry.external_url %}
+      {% if url == page.permalink %}{% assign class = 'active' %}{% else %}{% assign class = nil %}{% endif %}
+      {% include smart_link.html content=entry.title url=url external_url=entry.external_url class=class %}
 
       {% else %}
       <span>{{ entry.title }}</span>
