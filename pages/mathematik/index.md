@@ -15,7 +15,7 @@ Anmeldung zum Korrespondenzzirkel Mathematik (KZM) ist auch jetzt noch möglich!
 
 [Onlineanmeldung für den KZM](https://www.sachsen.schule/~bezirkskomitee/Onlineanmeldung.htm)
 
-# Aktuelle KZM-Aufgabenserien:
+# Aktuelle KZM-Aufgabenserien
 
 - [Klasse 5](https://www.sachsen.schule/~bezirkskomitee/neu/Aufgaben5Serie2.pdf)
 - [Klasse 6](https://www.sachsen.schule/~bezirkskomitee/neu/Aufgaben6Serie3.pdf)
