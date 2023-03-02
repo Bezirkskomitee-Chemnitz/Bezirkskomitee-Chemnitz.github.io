@@ -1,1 +1,37 @@
-<aside></aside>
+{% if site.data.sidenav.faculties[page.faculty] %}
+<aside>
+
+  <ul>
+    {% for entry in site.data.sidenav.faculties[page.faculty] %}
+    <li>
+      {% assign faculty = site.topnav | where: 'faculty', page.faculty %}
+      {% for e in faculty %}{% assign baseurl = e.url %}{% endfor %}
+
+      {% if entry.url or entry.external_url %}
+      {% assign url = entry.url | prepend: baseurl | relative_url %}
+      <a href="{{ entry.external_url | default: url }}">
+        {{ entry.title }}
+      </a>
+      {% else %}
+      <span>{{ entry.title }}</span>
+      {% endif %}
+
+      {% if entry.items %}
+      <ul>
+        {% for item in entry.items %}
+        <li>
+          {% assign url = item.url | prepend: baseurl | relative_url %}
+          <a href="{{ item.external_url | default: url }}">
+            {{ item.title }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+    </li>
+    {% endfor %}
+  </ul>
+
+</aside>
+{% endif %}
