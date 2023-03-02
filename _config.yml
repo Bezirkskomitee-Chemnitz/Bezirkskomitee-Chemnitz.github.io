@@ -25,10 +25,15 @@ rss:
 google_analytics:
 
 # main navigation
-faculty_navigation:
+topnav:
   - name: Mathematik
+    url: mathematik/
+    faculty: math # name independent faculty identifier to 'connect' topnav with page defaults
   - name: Physik
-  - name: Chemie
+    url: physik/
+    faculty: physics
+
+  - name: Chemie # this faculty is not hosted on this webpage, so define an external_url
     external_url: https://www.tu-chemnitz.de/chemie/stoeck/
   - name: Biologie
     external_url: https://www.ipn.uni-kiel.de/aktuell/ibo/ibo_web1.htm
@@ -46,15 +51,15 @@ defaults:
   - scope:
       path: ""
     values:
-      layout: "default"
-  
+      layout: default
+
   - scope:
-      path: "pages/mathematik/*"
+      path: pages/mathematik/* # location of all 'mathematik' related pages
     values:
-      layout: "default"
-      faculty: "mathematik"
+      layout: default
+      faculty: math # name independent faculty identifier to 'connect' topnav with page defaults
   - scope:
-      path: "pages/physik/*"
+      path: pages/physik/*
     values:
-      layout: "default"
-      faculty: "physik"
+      layout: default
+      faculty: physics
