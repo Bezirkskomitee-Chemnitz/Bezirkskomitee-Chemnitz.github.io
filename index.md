@@ -4,12 +4,13 @@ permalink: /
 date: 2023-03-01
 ---
 
-{% include anchor.html content="Was finden Sie hier?" tag="h2" class="inherit" %}
+# Was finden Sie hier?
 
 - mathematische und naturwissenschaftliche Wettbewerbe
 - vielfältige Möglichkeiten der Förderung begabter Schüler (an Grundschulen und Gymnasien)
 - Material zur Förderung mathematisch interessierter Schüler
 - Ansprechpartner in der Begabtenförderung
 
-{% include anchor.html content="News" tag="h2" class="inherit" %}
+# News
+
 {% include posts.html %}
