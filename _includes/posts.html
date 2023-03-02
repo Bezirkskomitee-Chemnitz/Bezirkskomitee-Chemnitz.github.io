@@ -1,19 +1,19 @@
 <ul class="posts">
   {% for post in site.data.posts %}
   <li class="row">
+    {% if post.thumbnail %}
     <picture>
       <img
         src="{% if post.thumbnail contains '://' %}{{ post.thumbnail }}{% else %}{{ post.thumbnail | relative_url }}{% endif %}">
     </picture>
+    {% endif %}
     <article>
       <h3>{{ post.title }}</h3>
       <p>{{ post.description | truncate: 500 }}</p>
       <div class="row">
         {% assign date_format = site.date_format | default: '%d.%m.%Y' %}
         <time datetime="{{ post.date | date: '%Y-%m-%d %H:%M' }}">{{ post.date | date: date_format }}</time>
-        <a href="{% if post.url contains '://' %}{{ post.url }}{% else %}{{ post.url | relative_url }}{% endif %}">
-          Mehr lesen
-        </a>
+        {% include smart_link.html content='Mehr lesen' url=post.url external_url=post.external_url %}
       </div>
     </article>
   </li>

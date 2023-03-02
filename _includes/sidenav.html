@@ -8,12 +8,9 @@
       {% for e in faculty %}{% assign baseurl = e.url %}{% endfor %}
 
       {% if entry.url or entry.external_url %}
-      {% assign url = entry.url | prepend: baseurl | relative_url %}
-      {% if entry.external_url %}{% assign target = '_blank' %}{% else %}{% assign target = nil %}{% endif %}
-      <a href="{{ entry.external_url | default: url }}" target="{{ target }}">
-        {{ entry.title }}
-        {% if target %}<i class="{{ site.data.icons.external_url }}"></i>{% endif %}
-      </a>
+      {% assign url = entry.url | prepend: baseurl %}
+      {% include smart_link.html content=entry.title url=url external_url=entry.external_url %}
+
       {% else %}
       <span>{{ entry.title }}</span>
       {% endif %}
@@ -22,12 +19,8 @@
       <ul>
         {% for item in entry.items %}
         <li>
-          {% assign url = item.url | prepend: baseurl | relative_url %}
-          {% if item.external_url %}{% assign target = '_blank' %}{% else %}{% assign target = nil %}{% endif %}
-          <a href="{{ item.external_url | default: url }}" target="{{ target }}">
-            {{ item.title }}
-            {% if target %}<i class="{{ site.data.icons.external_url }}"></i>{% endif %}
-          </a>
+          {% assign url = item.url | prepend: baseurl %}
+          {% include smart_link.html content=item.title url=url external_url=item.external_url %}
         </li>
         {% endfor %}
       </ul>

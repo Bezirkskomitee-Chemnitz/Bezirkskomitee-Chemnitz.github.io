@@ -1,23 +1,18 @@
 <header class="row">
   <h1>
-    <a href="{{ site.baseurl }}/" class="inherit">{{ site.title }}</a>
+    <a href="{{ ''  | relative_url }}/" class="inherit">{{ site.title }}</a>
   </h1>
 
   <nav>
     <ul class="row">
       {% for faculty in site.topnav %}
       <li>
-        {% if faculty.external_url %}{% assign target = '_blank' %}{% else %}{% assign target = nil %}{% endif %}
-
         {% assign url = faculty.url | relative_url %}
         {% if url contains page.permalink and page.permalink != '/' %}
         {% assign class = 'active' %}
         {% else %}{% assign class = nil %}{% endif %}
 
-        <a href="{{ faculty.external_url | default: url  }}" class="{{ class }}" target="{{ target }}">
-          {{ faculty.name }}
-          {% if target %}<i class="{{ site.data.icons.external_url }}"></i>{% endif %}
-        </a>
+        {% include smart_link.html content=faculty.name url=faculty.url external_url=faculty.external_url class=class %}
       </li>
       {% endfor %}
     </ul>
