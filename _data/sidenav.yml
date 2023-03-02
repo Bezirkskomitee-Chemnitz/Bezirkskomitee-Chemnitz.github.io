@@ -1,0 +1,28 @@
+faculties:
+  math:
+    - title: Home
+      url: ""
+
+    - title: Korrespondenzzirkel
+      url: kzm/
+
+    - title: Wettbewerbe
+      items:
+        - title: Mathematikolympiade
+          url: olympiade/
+        - title: Adam-Ries-Wettbewerb
+          url: adam-ries/
+
+        - title: Känguru Wettbewerb
+          external_url: https://www.mathe-kaenguru.de/
+        - title: Bundeswettbewerb Mathematik
+          external_url: https://www.mathe-wettbewerbe.de/bundeswettbewerb-mathematik/
+
+    - title: Trainingsmaterial
+      url: material/
+
+    - title: Ranglisten
+      url: rankings/
+
+    - title: Impressum
+      url: impressum/
