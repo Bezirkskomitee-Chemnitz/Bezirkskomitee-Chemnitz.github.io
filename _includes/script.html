@@ -1,0 +1,20 @@
+<script defer>
+
+  function add_external_link_icon(element) {
+    // add 'external link' icon after element
+    var jQel = $(element);
+    var before = jQel.html();
+    jQel.html(before + '\n<i class="{{ site.data.icons.external_url }}"></i>');
+  }
+
+  $(document).ready(() => {
+    // open external urls in new tab
+    $("a[href$='http']").each(() => {
+      $(this).attr("target", "_blank");
+    });
+
+    // add 'external link' icon to links that will open in a new tab
+    $("a[target='_blank']").each((el) => { add_external_link_icon(el); });
+  });
+
+</script>
