@@ -1,6 +1,4 @@
 {% if include.external_url %}{% assign target = '_blank' %}{% else %}{% assign target = nil %}{% endif %}
 {% assign url = include.url | relative_url %}
 
-<a href="{{ include.external_url | default: url  }}" class="{{ include.class }}" target="{{ target }}">
-  {{ include.content }}&thinsp;{% if target %}<i class="{{ site.data.icons.external_url }}"></i>{% endif %}
-</a>
+<a href="{{ include.external_url | default: url  }}" class="{{ include.class }}" target="{{ target }}">{{ include.content }}</a>

@@ -136,6 +136,7 @@ footer {
 footer>.row {
   justify-content: center;
 }
+
 footer>.row>:not(:last-child) {
   margin-right: 0.5em;
 }
@@ -180,6 +181,64 @@ ul.row,
 ul.posts {
   padding: 0;
   list-style-type: none;
+}
+
+/* font awesome icons for specific link types */
+a:not(.no_icon):before,
+a:not(.no_icon):after {
+  font-family: "FontAwesome";
+  font-size: 0.9em;
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: baseline;
+  padding-left: 0.2em;
+}
+
+/* paperclip */
+a:not(.no_icon)[href*="#"]:after {
+  content: "\f0c6";
+}
+
+/* arrow-up-right-from-square */
+a:not(.no_icon)[target="_blank"]:after {
+  content: "\f08e";
+}
+
+/* file-pdf */
+a:not(.no_icon)[href$=".pdf"]:after {
+  content: "\f1c1";
+}
+
+/* file-word */
+a:not(.no_icon)[href$=".doc"]:after,
+a:not(.no_icon)[href$=".docx"]:after {
+  content: "\f1c2";
+}
+
+/* file-excel */
+a:not(.no_icon)[href$=".xls"]:after,
+a:not(.no_icon)[href$=".xlsx"]:after {
+  content: "\f1c3";
+}
+
+/* envelope */
+a:not(.no_icon)[href^="mailto:"]:before {
+  content: "\f0e0";
+}
+
+/* download */
+a:not(.no_icon)[download]:after {
+  content: "\f019";
+}
+
+/* file-zipper */
+a:not(.no_icon)[href$=".zip"]:after {
+  content: "\f1c6";
+}
+
+/* info */
+abbr[title]:before {
+  content: "\f129";
 }
 
 /* custom structures */
