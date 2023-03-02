@@ -5,11 +5,18 @@
 
   <nav>
     <ul class="row">
-      {% for faculty in site.faculty_navigation %}
+      {% for faculty in site.topnav %}
       <li>
-        {% assign url = faculty.name | downcase | replace: ' ', '-' | relative_url | append: '/' %}
-        <a href="{{ faculty.external_url | default: url  }}" {% if faculty.external_url %}target="_blank" {% endif %}>{{
-          faculty.name }}</a>
+        {% if faculty.external_url %}{% assign target = '_blank' %}{% else %}{% assign target = '' %}{% endif %}
+
+        {% assign url = faculty.url | relative_url %}
+        {% if url contains page.permalink and page.permalink != '/' %}
+        {% assign class = 'active' %}
+        {% else %}{% assign class = '' %}{% endif %}
+
+        <a href="{{ faculty.external_url | default: url  }}" class="{{ class }}" target="{{ target }}">
+          {{ faculty.name }}
+        </a>
       </li>
       {% endfor %}
     </ul>
