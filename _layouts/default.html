@@ -7,11 +7,12 @@
 <body>
   {% include header.html %}
 
-  {% if page.faculty %}{% include sidenav.html %}{% endif %}
-
-  <main>
-    {{ content }}
-  </main>
+  <div {% if page.faculty %}class="row" {% endif %}>
+    {% if page.faculty %}{% include sidenav.html %}{% endif %}
+    <main>
+      {{ content }}
+    </main>
+  </div>
 
   {% include footer.html %}
 
