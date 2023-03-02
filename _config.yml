@@ -39,7 +39,7 @@ topnav:
     external_url: https://www.ipn.uni-kiel.de/aktuell/ibo/ibo_web1.htm
 
 # custom settings
-dark_mode: false
+dark_mode: true
 date_format: "%d.%m.%Y"
 
 # kramdown settings
