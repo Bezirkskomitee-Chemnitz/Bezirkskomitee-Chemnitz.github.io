@@ -36,7 +36,8 @@ html[data-theme*="dark"] {
 
 html {
   --highlight-color: var(--blue);
-  --focus-color: var(--cyan);
+  --focus-color: var(--violet);
+  --active-color: var(--cyan);
   --title-color: var(--green);
   --heading-color: var(--orange);
 }
@@ -82,8 +83,11 @@ a:visited {
 }
 
 a.active,
-a:active,
-a:hover {
+a:active {
+  color: var(--active-color);
+}
+
+a:not(.active):hover {
   color: var(--focus-color);
 }
 
