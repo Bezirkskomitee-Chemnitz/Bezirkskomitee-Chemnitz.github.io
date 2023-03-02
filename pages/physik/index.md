@@ -1,7 +1,7 @@
 ---
 title: Physik
 # the URL for the faculty navigation link is configured within the topnav and must be the same as this permalink
-permalink: /physik/
+permalink: physik/
 date: 2023-03-01
 ---
 
