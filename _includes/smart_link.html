@@ -2,6 +2,5 @@
 {% assign url = include.url | relative_url %}
 
 <a href="{{ include.external_url | default: url  }}" class="{{ include.class }}" target="{{ target }}">
-  {{ include.content }}
-  {% if target %}<i class="{{ site.data.icons.external_url }}"></i>{% endif %}
+  {{ include.content }}&thinsp;{% if target %}<i class="{{ site.data.icons.external_url }}"></i>{% endif %}
 </a>
