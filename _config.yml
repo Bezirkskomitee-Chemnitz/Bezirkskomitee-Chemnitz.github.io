@@ -1,12 +1,12 @@
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
 title: Bezirkskomitee Chemnitz
-email: example-email@sachsen.schule
+email:
 description: |
   Bezirkskomitee Chemnitz
   zur Förderung mathematisch-naturwissenschaftlich
   begabter und interessierter Schüler
-keywords: bezirkskomitee, chemnitz, olympiaden
+keywords: bezirkskomitee, chemnitz, wettbewerbe
 language: de
 baseurl: "/bezirkskomitee-chemnitz" # the subpath of your site, e.g. /blog
 url: "https://fabianbartl.github.io" # the base hostname & protocol for your site, e.g. http://example.com
