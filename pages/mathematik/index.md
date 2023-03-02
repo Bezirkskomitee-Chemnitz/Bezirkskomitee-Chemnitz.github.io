@@ -1,6 +1,6 @@
 ---
 title: Mathematik
-# the URL for the faculty navigation link is configured within the topnav and must be the same as this permalink
+# the url for the faculty navigation link is configured within the topnav and must be the same as this permalink
 permalink: mathematik/
 date: 2022-10-26
 ---
@@ -13,14 +13,14 @@ Anmeldung zum Korrespondenzzirkel Mathematik (KZM) ist auch jetzt noch möglich!
 - zwei
 - drei
 
-{% include smart_link.html content="Onlineanmeldung für den KZM" external_url="https://www.sachsen.schule/~bezirkskomitee/Onlineanmeldung.htm" %}
+[Onlineanmeldung für den KZM](https://www.sachsen.schule/~bezirkskomitee/Onlineanmeldung.htm)
 
-# Aktuelle KZM-Aufgabenserien (Inhalte erneuert am 26.10. 2022):
+# Aktuelle KZM-Aufgabenserien:
 
-- Klasse 5
-- Klasse 6
-- Klasse 7
-- Klasse 8
+- [Klasse 5](https://www.sachsen.schule/~bezirkskomitee/neu/Aufgaben5Serie2.pdf)
+- [Klasse 6](https://www.sachsen.schule/~bezirkskomitee/neu/Aufgaben6Serie3.pdf)
+- [Klasse 7](https://www.sachsen.schule/~bezirkskomitee/neu/Aufgaben7Serie2.pdf)
+- [Klasse 8](https://www.sachsen.schule/~bezirkskomitee/neu/Aufgaben8Serie3.pdf)
 
 # Trainingsmaterial
 
