@@ -9,8 +9,10 @@
 
       {% if entry.url or entry.external_url %}
       {% assign url = entry.url | prepend: baseurl | relative_url %}
-      <a href="{{ entry.external_url | default: url }}">
+      {% if entry.external_url %}{% assign target = '_blank' %}{% else %}{% assign target = nil %}{% endif %}
+      <a href="{{ entry.external_url | default: url }}" target="{{ target }}">
         {{ entry.title }}
+        {% if target %}<i class="{{ site.data.icons.external_url }}"></i>{% endif %}
       </a>
       {% else %}
       <span>{{ entry.title }}</span>
@@ -21,8 +23,10 @@
         {% for item in entry.items %}
         <li>
           {% assign url = item.url | prepend: baseurl | relative_url %}
-          <a href="{{ item.external_url | default: url }}">
+          {% if item.external_url %}{% assign target = '_blank' %}{% else %}{% assign target = nil %}{% endif %}
+          <a href="{{ item.external_url | default: url }}" target="{{ target }}">
             {{ item.title }}
+            {% if target %}<i class="{{ site.data.icons.external_url }}"></i>{% endif %}
           </a>
         </li>
         {% endfor %}
