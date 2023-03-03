@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ page.language | default: site.language | default: 'de' }}"
-  data-theme="{% if site.dark_mode %}dark{% else %}light{% endif %}" {% if jekyll.environment != 'production' %}debug{%
+  data-theme="{% if site.dark_mode %}dark{% else %}light{% endif %}" {% if jekyll.environment !='production' %}debug{%
   endif %}>
 
 {% include head.html %}
@@ -17,9 +17,14 @@
 
   {% include footer.html %}
 
-  <a href="#" class="scroll-up fixed no_icon">
-    <i class="fa-solid fa-circle-arrow-up fa-2x"></i>
-  </a>
+  <div class="buttons-row fixed">
+    <a class="theme-selector no_icon" onclick>
+      <i class="fa fa-fw fa-2x"></i>
+    </a>
+    <a class="scroll-up no_icon" href="#">
+      <i class="fa-solid fa-fw fa-circle-arrow-up fa-2x"></i>
+    </a>
+  </div>
 </body>
 
 </html>
