@@ -1,22 +1,41 @@
 /* colors */
 
 :root {
-  --base03: #002b36;
-  --base02: #073642;
-  --base01: #586e75;
-  --base00: #657b83;
-  --base0: #839496;
-  --base1: #93a1a1;
-  --base2: #eee8d5;
-  --base3: #fdf6e3;
-  --yellow: #b58900;
-  --orange: #cb4b16;
-  --red: #dc322f;
-  --magenta: #d33682;
-  --violet: #6c71c4;
-  --blue: #268bd2;
-  --cyan: #2aa198;
-  --green: #859900;
+  --RAW-base03: 0, 43, 54;
+  --RAW-base02: 7, 54, 66;
+  --RAW-base01: 88, 110, 117;
+  --RAW-base00: 99, 122, 130;
+  --RAW-base0: 131, 148, 150;
+  --RAW-base1: 147, 161, 161;
+  --RAW-base2: 238, 232, 213;
+  --RAW-base3: 253, 246, 227;
+  --RAW-yellow: 181, 137, 0;
+  --RAW-orange: 203, 75, 22;
+  --RAW-red: 220, 50, 47;
+  --RAW-magenta: 211, 54, 130;
+  --RAW-violet: 108, 113, 196;
+  --RAW-blue: 38, 139, 210;
+  --RAW-cyan: 42, 161, 152;
+  --RAW-green: 133, 153, 0;
+}
+
+:root {
+  --base03: rgb(var(--RAW-base03));
+  --base02: rgb(var(--RAW-base02));
+  --base01: rgb(var(--RAW-base01));
+  --base00: rgb(var(--RAW-base00));
+  --base0: rgb(var(--RAW-base0));
+  --base1: rgb(var(--RAW-base1));
+  --base2: rgb(var(--RAW-base2));
+  --base3: rgb(var(--RAW-base3));
+  --yellow: rgb(var(--RAW-yellow));
+  --orange: rgb(var(--RAW-orange));
+  --red: rgb(var(--RAW-red));
+  --magenta: rgb(var(--RAW-magenta));
+  --violet: rgb(var(--RAW-violet));
+  --blue: rgb(var(--RAW-blue));
+  --cyan: rgb(var(--RAW-cyan));
+  --green: rgb(var(--RAW-green));
 }
 
 /* apply scheme */
@@ -40,6 +59,12 @@ html {
   --active-color: var(--cyan);
   --title-color: var(--green);
   --heading-color: var(--orange);
+}
+
+/* for debugging */
+
+html[debug] * {
+  outline: 1px solid rgba(var(--RAW-magenta), 0.3);
 }
 
 /* other variables */
@@ -115,12 +140,14 @@ header {
   margin: 1em 0;
 }
 
-header>nav {
-  font-size: 1.05em;
+header>h1 {
+  margin: 0;
 }
 
-header>nav>.row {
-  align-items: center;
+header>nav {
+  font-size: 1.05em;
+  margin-top: 0.5em;
+  height: 1.2em;
 }
 
 footer {
@@ -160,16 +187,6 @@ footer>.row>:not(:last-child) {
 
 .fixed {
   position: fixed;
-}
-
-.theme-selector {
-  top: 5px;
-  left: 5px;
-}
-
-.scroll-up {
-  bottom: 5px;
-  right: 5px;
 }
 
 /* remove default style */
@@ -279,6 +296,13 @@ html[data-theme*="dark"] .posts>.row {
   margin: 0.5em auto;
 }
 
+.scroll-up {
+  bottom: 5px;
+  right: 5px;
+  background-color: var(--background-color);
+  border-radius: 100%;
+}
+
 /* style (adjustments) for different screen sizes */
 
 body {
@@ -313,10 +337,14 @@ body {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
 
   body {
     width: 98%;
+  }
+
+  header>h1 {
+    width: 30%;
   }
 
   .posts>.row {
@@ -324,8 +352,17 @@ body {
   }
 }
 
-/* for debugging */
+@media screen and (max-width: 650px) {
+  header {
+    margin-bottom: 2em;
+  }
 
-* {
-  /* outline: 1px solid red; */
+  header>nav.row {
+    display: block;
+    margin-top: 0;
+  }
+
+  header>nav>div {
+    margin-bottom: 0.3em;
+  }
 }
