@@ -3,18 +3,16 @@
     <a href="{{ ''  | relative_url }}/" class="inherit no_icon">{{ site.title }}</a>
   </h1>
 
-  <nav>
-    <ul class="row">
-      {% for faculty in site.topnav %}
-      <li>
-        {% assign url = faculty.url | relative_url %}
-        {% if url contains page.permalink and page.permalink != '/' %}
-        {% assign class = 'active' %}
-        {% else %}{% assign class = nil %}{% endif %}
+  <nav class="row">
+    {% for faculty in site.topnav %}
+    <div>
+      {% assign url = faculty.url | relative_url %}
+      {% if url contains page.permalink and page.permalink != '/' %}
+      {% assign class = 'active' %}
+      {% else %}{% assign class = nil %}{% endif %}
 
-        {% include smart_link.html content=faculty.name url=faculty.url external_url=faculty.external_url class=class %}
-      </li>
-      {% endfor %}
-    </ul>
+      {% include smart_link.html content=faculty.name url=faculty.url external_url=faculty.external_url class=class %}
+    </div>
+    {% endfor %}
   </nav>
 </header>
