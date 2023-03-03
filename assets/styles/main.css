@@ -438,18 +438,16 @@ body {
     width: var(--aside-width);
     padding: 7em 0.5em;
     background-color: var(--accent-color);
-    box-shadow: 0 0 0 var(--accent-color);
   }
   
   aside:hover {
     transform: translateX(0);
     transition: var(--animate-all);
-    box-shadow: 5px 0 10px var(--accent-color);
   }
 
   aside:after {
     position: fixed;
-    top: 6em;
+    top: 6.2em;
     left: calc(var(--aside-width) - 0.5em);
     background-color: var(--accent-color);
     content: "\f0c9";
