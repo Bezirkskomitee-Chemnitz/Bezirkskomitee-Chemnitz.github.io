@@ -64,7 +64,7 @@ html {
 /* for debugging */
 
 html[debug] * {
-  outline: 1px solid rgba(var(--RAW-magenta), 0.3);
+  outline: 1px solid rgba(var(--RAW-magenta), 0.4);
 }
 
 /* other variables */
@@ -198,6 +198,7 @@ ul.posts {
 }
 
 /* font awesome icons for specific link types */
+abbr[title]:before,
 a:not(.no_icon):before,
 a:not(.no_icon):after {
   font-family: "FontAwesome";
@@ -303,8 +304,6 @@ html[data-theme*="dark"] .posts>.row {
 
 .buttons-row>a {
   display: block;
-  background-color: var(--background-color);
-  border-radius: 100%;
   height: 2.4em;
   padding-top: 0.2em;
   font-size: 0.8em;
@@ -387,6 +386,4 @@ body {
   }
 }
 
-@media screen and (max-width: 400px) {
-  
-}
+@media screen and (max-width: 400px) {}

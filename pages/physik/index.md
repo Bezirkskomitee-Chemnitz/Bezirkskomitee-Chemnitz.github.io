@@ -9,7 +9,7 @@ date: 2023-03-01
 
 ## Sächsische Physikolympiade
 
-[Hier](http://www.lzphysik-chemnitz.de/) geht es zum **Verein zur Förderung der Sächsischen Physikolympiade e.V.** mit Möglichkeit des Aufgabendownloads (1.Stufe / Hausaufgabenwettbewerb).
+[Hier](http://www.lzphysik-chemnitz.de/) geht es zum **Verein zur Förderung der Sächsischen Physikolympiade e.V.** mit Möglichkeit des Aufgabendownloads (1. Stufe / Hausaufgabenwettbewerb).
 
 ## Sommerschule Physik
 
