@@ -1,5 +1,5 @@
 // cookie functions
-function set_cookie(cookieName, cookieValue, expiredTime = 1, unit = "h") {
+function set_cookie(name, value, expires = 1, unit = "h") {
   const time = new Date();
   let factor = 1;
   switch (unit) {
@@ -19,35 +19,37 @@ function set_cookie(cookieName, cookieValue, expiredTime = 1, unit = "h") {
     default:
       factor = 60 * 60;
   }
-  time.setTime(time.getTime() + (expiredTime * factor * 1000));
-  let expires = "expires=" + time.toUTCString();
-  document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+  time.setTime(time.getTime() + (expires * factor * 1000));
+  document.cookie = `${name}=${value};expires=${time.toUTCString()};path=/`;
 }
 
-function get_cookie(cookieName) {
-  let name = cookieName + "=";
-  let cookieArray = document.cookie.split(";");
-  for (let i = 0; i < cookieArray.length; i++) {
-    let cookieChar = cookieArray[i];
-    while (cookieChar.charAt(0) === " ") {
-      cookieChar = cookieChar.substring(1);
-    }
-    if (cookieChar.indexOf(name) === 0) {
-      return cookieChar.substring(name.length, cookieChar.length);
-    }
+function get_cookie(name) {
+  name = `${name}=`;
+  let array = document.cookie.split(";");
+  for (let i = 0; i < array.length; i++) {
+    let char = array[i];
+    while (char.charAt(0) === " ")
+      char = char.substring(1);
+    if (char.indexOf(name) === 0)
+      return char.substring(name.length, char.length);
   }
   return null;
 }
 
 // theme functions
+function to_theme(theme) {
+  return theme === "dark" ? "dark" : "light";
+}
+
 function set_theme(theme) {
   $("html").attr("data-theme", theme);
   set_cookie("theme", theme, 1, "y");
 }
 
 function get_theme(from_attr = false) {
-  if (from_attr) return $("html").attr("data-theme");
-  return get_cookie("theme");
+  if (from_attr)
+    return to_theme($("html").attr("data-theme"));
+  return to_theme(get_cookie("theme"));
 }
 
 // debug functions
@@ -65,34 +67,25 @@ $(document).ready(function () {
   set_theme(get_theme());
 
   // add 'no_icon' class to links including images
-  $("a > img").each(function () {
-    $(this).parent().addClass("no_icon");
-  });
-  $("a > pictures").each(function () {
-    $(this).parent().addClass("no_icon");
-  });
+  function parent_no_icon(element) { $(element).parent().addClass("no_icon"); }
+  $("a > img").each(() => { parent_no_icon(this); });
+  $("a > pictures").each(() => { parent_no_icon(this); });
 
   // open external urls in new tab
   $("a").each(function () {
     var a = $(this);
     var href = a.attr("href");
-    if ((href ? href : "").includes("://") && !a.attr("target")) {
+    if ((href ? href : "").includes("://") && !a.attr("target"))
       a.attr("target", "_blank");
-    }
   });
 
   // functionality for debug switch button
   $(".debug-switch").on("click touch", (evt) => {
-    // toggle state
     set_debug(!get_debug());
   });
 
   // functionality for theme selector button
   $(".theme-selector").on("click touch", (evt) => {
-    if ($("html").attr("data-theme") === "dark") {
-      set_theme("light");
-    } else {
-      set_theme("dark");
-    }
+    set_theme($("html").attr("data-theme") === "dark" ? "light" : "dark");
   });
 });
