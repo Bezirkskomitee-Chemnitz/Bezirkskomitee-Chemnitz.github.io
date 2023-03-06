@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ page.language | default: site.language | default: 'de' }}"
-  data-theme="{% if site.dark_mode %}dark{% else %}light{% endif %}"
-  {% if jekyll.environment != 'production' %}data-debug="true" {% endif %}>
+  data-theme="{% if site.dark_mode %}dark{% else %}light{% endif %}" {% if jekyll.environment !='production'
+  %}data-debug="true" {% endif %}>
 
 {% include head.html %}
 
@@ -11,6 +11,11 @@
   <div {% if page.faculty %}class="row" {% endif %}>
     {% if page.faculty %}{% include sidenav.html %}{% endif %}
     <main>
+
+      {% if page.title %}{% else %}
+      <h2>{{ active_title }}</h2>
+      {% endif %}
+
       {{ content }}
     </main>
   </div>

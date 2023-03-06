@@ -21,7 +21,14 @@
         {% for item in entry.items %}
         <li>
           {% assign url = item.url | prepend: baseurl %}
-          {% include smart_link.html content=item.title url=url external_url=item.external_url %}
+
+          {% if url == page.permalink %}
+          {% assign class = 'active' %}
+          {% assign active_title = item.title %}
+
+          {% else %}{% assign class = nil %}{% assign active_title = nil %}{% endif %}
+
+          {% include smart_link.html content=item.title url=url external_url=item.external_url class=class %}
         </li>
         {% endfor %}
       </ul>
