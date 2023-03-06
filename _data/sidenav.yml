@@ -12,6 +12,8 @@ faculties:
           url: olympiade/
         - title: Adam-Ries-Wettbewerb
           url: adam-ries/
+        - title: Regionale Wettbewerbe
+          url: regio/
 
         - title: Känguru Wettbewerb
           external_url: https://www.mathe-kaenguru.de/
@@ -24,5 +26,5 @@ faculties:
     - title: Ranglisten
       url: rankings/
 
-    - title: Impressum
-      url: impressum/
+    - title: Inhaltlich Verantwortlicher
+      url: verantwortung/
