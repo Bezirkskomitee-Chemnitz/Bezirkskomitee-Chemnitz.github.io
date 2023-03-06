@@ -256,15 +256,24 @@ ul.row {
 
 /* font awesome icons for specific link types */
 aside:after,
-abbr[title]:before,
-a:not(.no_icon):before,
-a:not(.no_icon):after {
+abbr[title]:after,
+a:not(.no_icon):after,
+  a:not(.no_icon):before {
   font-family: "FontAwesome";
   font-size: 0.9em;
   display: inline-block;
   text-decoration: none;
   vertical-align: baseline;
+}
+
+aside:after,
+abbr[title]:after,
+a:not(.no_icon):after {
   padding-left: 0.2em;
+}
+
+a:not(.no_icon):before {
+  padding-right: 0.2em;
 }
 
 /* paperclip */
@@ -310,7 +319,7 @@ a:not(.no_icon)[href$=".zip"]:after {
 }
 
 /* info */
-abbr[title]:before {
+abbr[title]:after {
   content: "\f129";
 }
 
