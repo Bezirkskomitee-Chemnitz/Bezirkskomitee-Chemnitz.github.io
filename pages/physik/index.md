@@ -32,7 +32,7 @@ Lösungen bleibt ein Zeitraum von drei Monaten. Die Aufgaben werden korrigiert u
 Sollte es während des Zeitraums der Bearbeitung Fragen geben, steht Herr Dr. Berger (TU Chemnitz) als Ansprechpartner
 zur Verfügung.
 
-#### Ansprechpartner:
+### Ansprechpartner
 
 Herr Dr. Berger<br>
 E-Mail: {% include email.html email="berger@physik.tu-chemnitz.de" %}
