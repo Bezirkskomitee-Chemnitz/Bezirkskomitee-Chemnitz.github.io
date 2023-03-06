@@ -50,7 +50,16 @@ function get_theme(from_attr = false) {
   return get_cookie("theme");
 }
 
-// document on ready
+// debug functions
+function set_debug(switch_on) {
+  $("html").attr("debug", switch_on ? "true" : "false");
+}
+
+function get_debug() {
+  return $("html").attr("debug") === "true";
+}
+
+// routine when document is ready
 $(document).ready(function () {
   // update theme from cookie
   set_theme(get_theme());
@@ -72,9 +81,14 @@ $(document).ready(function () {
     }
   });
 
+  // functionality for debug switch button
+  $(".debug-switch").on("click touch", (evt) => {
+    // toggle state
+    set_debug(!get_debug());
+  });
+
   // functionality for theme selector button
   $(".theme-selector").on("click touch", (evt) => {
-    var icon = $(evt.target).find("i");
     if ($("html").attr("data-theme") === "dark") {
       set_theme("light");
     } else {

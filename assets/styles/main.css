@@ -92,7 +92,7 @@ html {
 
 /* for debugging */
 
-html[debug] * {
+html[debug="true"] * {
   outline: 1px solid rgba(var(--RAW-magenta), 0.4);
 }
 
@@ -188,7 +188,7 @@ footer>.row>:not(:last-child) {
 }
 
 aside {
-  border-right: 1px solid var(--text-color);
+  border-right: 1.5px solid var(--text-color);
   padding-right: 1em;
 }
 
@@ -343,20 +343,29 @@ html[data-theme*="dark"] .posts>.row {
   margin: 0.5em auto;
 }
 
-.buttons-row {
+.overlay {
   right: 10px;
   bottom: 10px;
 }
 
-.buttons-row>a {
+.overlay>a {
   display: block;
   height: 2.4em;
   padding-top: 0.2em;
   font-size: 0.8em;
 }
 
-.buttons-row>a:not(:first-child) {
+.overlay>a:not(:first-child) {
   margin-top: 10px;
+}
+
+.debug-switch>i:before,
+html[data-debug="false"] .debug-switch>i:before {
+  content: "0";
+}
+
+html[data-debug="true"] .debug-switch>i:before {
+  content: "1";
 }
 
 .theme-selector>i:before,
