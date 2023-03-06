@@ -1,7 +1,9 @@
 <div class="overlay fixed">
+  {% if jekyll.environment != 'production' %}
   <a class="debug-switch no_icon" onclick>
     <i class="fa fa-fw fa-2x"></i>
   </a>
+  {% endif %}
 
   <a class="theme-selector no_icon" onclick>
     <i class="fa fa-fw fa-2x"></i>
