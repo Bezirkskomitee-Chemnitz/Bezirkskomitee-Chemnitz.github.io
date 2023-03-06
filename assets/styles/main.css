@@ -90,6 +90,13 @@ html {
   --heading-color: rgb(var(--RAW-heading-color));
 }
 
+/* on color dependent variables */
+
+html {
+  --default-border-width: 1.5px;
+  --default-border: var(--default-border-width) solid var(--border-color);
+}
+
 /* for debugging */
 
 html[data-debug="true"] * {
@@ -144,6 +151,11 @@ a.inherit:hover {
   text-decoration: inherit;
 }
 
+hr {
+  border-style: none;
+  border-top: var(--default-border);
+}
+
 h1 {
   margin-top: 0;
   color: var(--title-color);
@@ -188,7 +200,7 @@ footer>.row>:not(:last-child) {
 }
 
 aside {
-  border-right: 1.5px solid var(--text-color);
+  border-right: var(--default-border);
   padding-right: 1em;
 }
 
@@ -306,14 +318,10 @@ abbr[title]:before {
 
 .posts>.row {
   align-items: flex-start;
-  border: 1.5px solid var(--border-color);
+  border: var(--default-border);
   margin: 1em;
   padding: 1em;
   border-radius: 10px;
-}
-
-html[data-theme*="dark"] .posts>.row {
-  border: 2px solid var(--border-color);
 }
 
 .posts>.row:not(:last-child) {
