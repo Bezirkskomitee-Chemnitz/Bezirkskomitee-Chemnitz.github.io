@@ -54,11 +54,11 @@ function get_theme(from_attr = false) {
 
 // debug functions
 function set_debug(switch_on) {
-  $("html").attr("debug", switch_on ? "true" : "false");
+  $("html").attr("data-debug", switch_on ? "true" : "false");
 }
 
 function get_debug() {
-  return $("html").attr("debug") === "true";
+  return $("html").attr("data-debug") === "true";
 }
 
 // routine when document is ready

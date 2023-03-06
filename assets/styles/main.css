@@ -92,7 +92,7 @@ html {
 
 /* for debugging */
 
-html[debug="true"] * {
+html[data-debug="true"] * {
   outline: 1px solid rgba(var(--RAW-magenta), 0.4);
 }
 
