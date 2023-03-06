@@ -187,6 +187,11 @@ footer>.row>:not(:last-child) {
   margin-right: 0.5em;
 }
 
+aside {
+  border-right: 1px solid var(--text-color);
+  padding-right: 1em;
+}
+
 aside>ul {
   padding-left: 0;
   list-style-type: none;
