@@ -12,9 +12,9 @@
     {% if page.faculty %}{% include sidenav.html %}{% endif %}
     <main>
 
-      {% if page.title %}{% else %}
+      {% unless page.title %}
       <h2>{{ active_title }}</h2>
-      {% endif %}
+      {% endunless %}
 
       {{ content }}
     </main>
