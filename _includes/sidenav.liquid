@@ -9,11 +9,7 @@
 
       {% if entry.url or entry.external_url %}
       {% assign url = entry.url | prepend: baseurl %}
-
-      {% if entry.url and url == page.permalink %}
-      {% assign class = 'active' %}
-      {% assign active_title = page.title %}
-      {% else %}{% assign class = nil %}{% assign active_title = nil %}{% endif %}
+      {% if entry.url and url == page.permalink %}{% assign class = 'active' %}{% else %}{% assign class = nil %}{% endif %}
 
       {% include smart_link.html content=entry.title url=url external_url=entry.external_url class=class %}
 
@@ -26,11 +22,7 @@
         {% for item in entry.items %}
         <li>
           {% assign url = item.url | prepend: baseurl %}
-
-          {% if item.url and url == page.permalink %}
-          {% assign class = 'active' %}
-          {% assign active_title = item.title %}
-          {% else %}{% assign class = nil %}{% assign active_title = nil %}{% endif %}
+          {% if item.url and url == page.permalink %}{% assign class = 'active' %}{% else %}{% assign class = nil %}{% endif %}
 
           {% include smart_link.html content=item.title url=url external_url=item.external_url class=class %}
         </li>

@@ -11,11 +11,6 @@
   <div {% if page.faculty %}class="row" {% endif %}>
     {% if page.faculty %}{% include sidenav.liquid %}{% endif %}
     <main>
-
-      {% unless page.title %}
-      <h2>{{ active_title }}</h2>
-      {% endunless %}
-
       {{ content }}
     </main>
   </div>
