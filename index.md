@@ -13,4 +13,4 @@ date: 2023-03-01
 
 # News
 
-{% include posts.html %}
+{% include posts.liquid %}
