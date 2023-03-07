@@ -46,6 +46,17 @@ date_format: "%d.%m.%Y"
 kramdown:
   header_offset: 1
 
+# compress settings
+compress_html:
+  clippings: []
+  comments: []
+  endings: []
+  ignore:
+    envs: []
+  blanklines: true
+  profile: false
+  startings: []
+
 # page defaults
 defaults:
   - scope:
