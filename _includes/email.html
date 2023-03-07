@@ -1,1 +1,10 @@
-<a href="mailto:{{ include.email }}">{% if include.content %}{{ include.content }}{% else %}{{ include.email }}{% endif %}</a>
+{% assign html = "" %}
+{% for i in (0..include.email.size) %}
+{% assign char = include.email | slice: i, 1 %}
+
+{% if char contains '@' %}{% assign char = 'at' %}
+{% elsif char contains '.' %}{% assign char = 'point' %}
+{% endif %}
+
+{% assign html = html | append: '<span class="char-' | append: char | append: '"></span>' %}
+{% endfor %}<a href="mailto:{{ include.email }}">{% if include.content %}{{ include.content }}{% else %}{{ html }}{% endif %}</a>
