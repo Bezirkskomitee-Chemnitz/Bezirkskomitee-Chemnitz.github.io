@@ -3,13 +3,13 @@
   data-theme="{% if site.dark_mode %}dark{% else %}light{% endif %}" {% if jekyll.environment !='production'
   %}data-debug="true" {% endif %}>
 
-{% include head.html %}
+{% include head.liquid %}
 
 <body>
-  {% include header.html %}
+  {% include header.liquid %}
 
   <div {% if page.faculty %}class="row" {% endif %}>
-    {% if page.faculty %}{% include sidenav.html %}{% endif %}
+    {% if page.faculty %}{% include sidenav.liquid %}{% endif %}
     <main>
 
       {% unless page.title %}
@@ -20,8 +20,8 @@
     </main>
   </div>
 
-  {% include footer.html %}
-  {% include overlay.html %}
+  {% include footer.liquid %}
+  {% include overlay.liquid %}
 </body>
 
 </html>
