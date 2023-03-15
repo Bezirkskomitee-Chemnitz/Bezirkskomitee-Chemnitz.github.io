@@ -1,10 +1,17 @@
-{% assign html = "" %}
+{% assign html = '' %}{% assign str_encoded = '' %}
 {% for i in (0..include.email.size) %}
 {% assign char = include.email | slice: i, 1 %}
 
-{% if char contains '@' %}{% assign char = 'at' %}
-{% elsif char contains '.' %}{% assign char = 'point' %}
+{% if char contains '@' %}{% assign char_class = 'at' %}
+{% elsif char contains '.' %}{% assign char_class = 'dot' %}
+{% elsif char contains '+' %}{% assign char_class = 'plus' %}
+{% elsif char contains '-' %}{% assign char_class = 'minus' %}
+{% else %}{% assign char_class = char %}
 {% endif %}
 
-{% assign html = html | append: '<span class="char-' | append: char | append: '"></span>' %}
-{% endfor %}<a href="mailto:{{ include.email }}">{% if include.content %}{{ include.content }}{% else %}{{ html }}{% endif %}</a>
+{% assign char_key = char | prepend: "_" %}
+{% assign encoded_char = site.data.url_encoding_map[char_key] | default: char %}
+{% assign str_encoded = str_encoded | append: encoded_char %}
+
+{% assign html = html | append: '<span class="char-' | append: char_class | append: '"></span>' %}
+{% endfor %}<a href="mailto:{{ str_encoded }}">{% if include.content %}{{ include.content }}{% else %}{{ html }}{% endif %}</a>
