@@ -14,5 +14,4 @@
 {% assign str_encoded = str_encoded | append: encoded_char %}
 
 {% assign html = html | append: '<span class="char-' | append: char_class | append: '"></span>' %}
-{% endfor %}<a href="mailto:{{ str_encoded }}">{% if include.content %}{{ include.content }}{% else %}{{ html }}{% endif
-    %}</a>
+{% endfor %}<a href="mailto:{{ str_encoded }}">{% if include.content %}{{ include.content }}{% else %}{{ html }}{% endif %}</a>
