@@ -62,6 +62,6 @@
 .char-9:before { content: "9"; }
 
 .char-at:before { content: "@"; }
-.char-point:before { content: "."; }
+.char-dot:before { content: "."; }
 .char-plus:before { content: "+"; }
 .char-minus:before { content : "-"; }
