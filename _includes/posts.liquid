@@ -3,8 +3,7 @@
   <li class="row">
     {% if post.thumbnail %}
     <picture>
-      <img
-        src="{% if post.thumbnail contains '://' %}{{ post.thumbnail }}{% else %}{{ post.thumbnail | relative_url }}{% endif %}">
+      <img src="{% if post.thumbnail contains '://' %}{{ post.thumbnail }}{% else %}{{ post.thumbnail | relative_url }}{% endif %}">
     </picture>
     {% endif %}
     <article>
@@ -13,7 +12,9 @@
       <div class="row">
         {% assign date_format = site.date_format | default: '%d.%m.%Y' %}
         <time datetime="{{ post.date | date: '%Y-%m-%d %H:%M' }}">{{ post.date | date: date_format }}</time>
-        {% include smart_link.html content='Mehr lesen' url=post.url external_url=post.external_url %}
+        {% assign url_exists = post.url | default: post.external_url | default: false %}
+        {% if url_exists %}{% include smart_link.html content='Mehr lesen' url=post.url external_url=post.external_url %}
+        {% endif %}
       </div>
     </article>
   </li>
