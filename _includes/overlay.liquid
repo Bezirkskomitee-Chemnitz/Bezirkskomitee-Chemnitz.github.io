@@ -1,12 +1,12 @@
 <div class="overlay fixed">
   <a class="edit-page no_icon" href="https://github.com/FabianBartl/bezirkskomitee-chemnitz/edit/main/{{ page.path }}" target="_blank" title="Seite bearbeiten">
-    <i class="fa-solid fa-fw fa-2x fa-pen"></i>
+    <i class="fa-solid fa-pen fa-fw fa-2x"></i>
   </a>
 
   {% if jekyll.environment != 'production' %}
-  <a class="debug-switch no_icon" onclick>
-    <i class="fa fa-fw fa-2x"></i>
-  </a>
+    <a class="debug-switch no_icon" onclick>
+      <i class="fa fa-fw fa-2x"></i>
+    </a>
   {% endif %}
 
   <a class="theme-selector no_icon" onclick>
@@ -14,6 +14,6 @@
   </a>
 
   <a class="scroll-up no_icon" href="#">
-    <i class="fa-solid fa-fw fa-circle-arrow-up fa-2x"></i>
+    <i class="fa-solid fa-circle-arrow-up fa-fw fa-2x"></i>
   </a>
 </div>
