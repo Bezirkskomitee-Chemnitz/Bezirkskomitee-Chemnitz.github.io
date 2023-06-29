@@ -8,7 +8,7 @@ description: |
   begabter und interessierter Schüler
 keywords: bezirkskomitee, chemnitz, wettbewerbe
 language: de
-baseurl: "/bezirkskomitee-chemnitz" # the subpath of your site, e.g. /blog
+baseurl: "/bezirkskomitee-chemnitz/web" # the subpath of your site, e.g. /blog
 url: "https://fabianbartl.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # build settings
