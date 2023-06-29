@@ -9,7 +9,7 @@ Anmeldung zum Korrespondenzzirkel Mathematik (KZM) ist auch jetzt noch möglich!
 
 # Gute Argumente für eine Teilnahme am KZM
 
-- eins
+- Wir haben viel Spass
 - zwei
 - drei
 
