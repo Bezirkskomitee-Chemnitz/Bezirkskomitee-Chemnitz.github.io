@@ -26,8 +26,6 @@ Mathematikstudium erleichtern können.
 
 Im laufenden Schuljahr 2023/24 werden folgende Kurse angeboten:
 
-Tabelle ...  
-
 |Klassenstufe|Format|Rhythmus|Kursleitung               |
 |------------|------|--------|--------------------------|
 |     9      | tba  | tba    | M.Sc. Kai Lüttgen        |
