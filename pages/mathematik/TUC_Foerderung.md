@@ -28,7 +28,9 @@ Im laufenden Schuljahr 2023/24 werden folgende Kurse angeboten:
 
 Tabelle ...  
 
-|Klassenstufe|Format|Rhythmus|Kursleitung
+|Klassenstufe|Format|Rhythmus|Kursleitung               |
+|------------|------|--------|--------------------------|
+|     9      |      |        | M.Sc. Kai Lüttgen        |
 
 Das Format (Präsenz/Online/Hybrid) und der Rhythmus (7-tägig/14-tägig)
 sind kursspezifisch. Beides sowie die genauen Termine werden von den Kursleitenden zu Anfang der Kurse 
