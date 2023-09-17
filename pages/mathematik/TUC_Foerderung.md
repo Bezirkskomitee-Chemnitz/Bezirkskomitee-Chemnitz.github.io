@@ -26,7 +26,9 @@ Mathematikstudium erleichtern können.
 
 Im laufenden Schuljahr 2023/24 werden folgende Kurse angeboten:
 
-Tabelle ...
+Tabelle ...  
+
+|Klassenstufe|Format|Rhythmus|Kursleitung
 
 Das Format (Präsenz/Online/Hybrid) und der Rhythmus (7-tägig/14-tägig)
 sind kursspezifisch. Beides sowie die genauen Termine werden von den Kursleitenden zu Anfang der Kurse 
