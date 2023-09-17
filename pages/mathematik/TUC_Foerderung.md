@@ -1,4 +1,4 @@
-Mathematische Spitzenf¨orderung an der TU Chemnitz
+Mathematische Spitzenförderung an der TU Chemnitz
 
 F¨ur Sch¨ulerinnen und Sch¨uler aus der Chemnitzer Region bietet die TU
 Chemnitz ab der Klassenstufe 9 die M¨oglichkeit, schuljahrbegleitend an speziellen
