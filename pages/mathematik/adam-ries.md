@@ -14,7 +14,7 @@ date: 2023-03-06
 
 Bereits im Jahre 1981 wurde in Annaberg-Buchholz (Erzgebirge) ein ARW für mathematisch aktive Mädchen und Jungen des Bezirkes gestartet. Der Wettbewerb ergänzte die Mathematik-Olympiade, die damals für Schüler bis zur 6. Klasse im Allgemeinen mit der 2. Stufe endete. Er diente so der Begabungsfindung, um erfolgreichen Schülern im Folgejahr bereits einen Frühstart bei der 3. Stufe der Mathematik-Olympiade zu eröffnen. Anlässlich der Feierlichkeiten zum 500. Geburtstag von Adam Ries wurde 1992 der Wettbewerb neu konzipiert. Er führt seitdem mathematisch interessierte Schüler der Bundesländer Bayern, Thüringen und Sachsen sowie (ab dem Schuljahr 1994/95) aus Tschechien in einem dreistufigen Wettbewerb zusammen, also aus jenen Regionen, die historisch eng mit dem Leben und Wirken des Rechenmeisters verbunden sind.
 
-Aktuell findet der Adam-Ries-Wettbewerb unter Schirmherrschaft des Welterbe Montanregion Erzgebirge e.V.
+Aktuell findet der Adam-Ries-Wettbewerb unter Schirmherrschaft des
 [Welterbe Montanregion Erzgebirge e.V.](https://www.montanregion-erzgebirge.de/welterbe-aktuell/downloads/adam-ries-wettbewerb.html) statt.
 
 ## 1. Stufe
