@@ -22,6 +22,8 @@ Bildungsagenturt Chemnitz den Gymnasien und Einrichtungen des Zweiten Bildungswe
 Teilnehmer wählen im Vorfeld die Experimente aus und arbeiten dann in Kleingruppen zusammen.
 Den Abschluss der Sommerschule bildet eine Vorlesung zu aktuellen Erkenntnissen der Physik oder Astrophysik.
 
+Ansprechpartner: Frau [Dr. Wanke](mailto: martina.wanke@physik.tu-chemnitz.de)
+
 ## Korrespondenzzirkel Physik
 
 Dieser Zirkel soll allen interessierten Schülern ab Klassenstufe 9 die Möglichkeit bieten, sich mit physikalischen
@@ -29,7 +31,7 @@ Problemen auseinanderzusetzen. Dabei geht es nicht vorrangig um streng mathemati
 physikalische Durchdringung von Sachverhalten und das Modellieren physikalischer Lösungen.
 Über das Schuljahr verteilt erhalten Interessenten drei Aufgabenserien zu je drei Aufgaben. Für die Einreichung der
 Lösungen bleibt ein Zeitraum von drei Monaten. Die Aufgaben werden korrigiert und mit Hinweisen zurückgesandt.
-Sollte es während des Zeitraums der Bearbeitung Fragen geben, steht Herr Dr. Berger (TU Chemnitz) als Ansprechpartner
+Sollte es während des Zeitraums der Bearbeitung Fragen geben, steht Herr [Dr. Cain](https://www.tu-chemnitz.de/physik/THUS/de/staff/staff_details.php?PersonalID=33) (TU Chemnitz) als Ansprechpartner
 zur Verfügung.
 
 ### Ansprechpartner
