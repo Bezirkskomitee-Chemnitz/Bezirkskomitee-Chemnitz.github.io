@@ -28,12 +28,12 @@ Im laufenden Schuljahr 2023/24 werden folgende Kurse angeboten:
 
 |Klassenstufe|Format|Rhythmus|Kursleitung               |
 |------------|------|--------|--------------------------|
-|     9      | tba  | tba    | M.Sc. Kai Lüttgen        |
-|     10     | tba  | tba    | M.Sc. Laura Lippert      |
-|     11-13  | tba  | tba    | Dr. Frank Göring         |
+|     9      | tba  | tba    | [M.Sc. Kai Lüttgen](https://www-user.tu-chemnitz.de/~luek/)        |
+|     10     | tba  | tba    | [M.Sc. Laura Lippert](https://www-user.tu-chemnitz.de/~lipl/)      |
+|     11-13  | tba  | tba    | [Dr. Frank Göring](https://www.tu-chemnitz.de/mathematik/discrete/goering/)         |
 
 Das Format (Präsenz/Online/Hybrid) und der Rhythmus (7-tägig/14-tägig)
 sind kursspezifisch. Beides sowie die genauen Termine werden von den Kursleitenden zu Anfang der Kurse 
-mit den Teilnehmenden abgestimmt. Bitte wenden Sie sich bei Interesse oder Fragen gerne an den Koordinator Dr. Martin Schäfer.
-Bei hoher Nachfrage in einzelnen Kursen können unter Umständen nicht alle
-Teilnahmewünsche erfüllt werden. In diesem Fall werden Mitglieder der MO-Ranglisten vorrangig berücksichtigt.
+mit den Teilnehmenden abgestimmt. Bitte wenden Sie sich bei Interesse oder Fragen gerne an den Koordinator [Martin Schäfer](https://www.tu-chemnitz.de/mathematik/ang_analysis/schaefm/).
+<!-- Bei hoher Nachfrage in einzelnen Kursen können unter Umständen nicht alle
+Teilnahmewünsche erfüllt werden. In diesem Fall werden Mitglieder der MO-Ranglisten vorrangig berücksichtigt.-->
