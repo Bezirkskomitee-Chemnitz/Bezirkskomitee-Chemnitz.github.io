@@ -5,14 +5,10 @@ permalink: mathematik/
 date: 2022-10-26
 ---
 
-Anmeldung zum Korrespondenzzirkel Mathematik (KZM) ist auch jetzt noch möglich!
-
-# Gute Argumente für eine Teilnahme am KZM
-
-- Wir haben viel Spass
-- zwei
-- drei
-
+# Fördermöglichkeiten
+- an der TU Chemnitz [weitere Informationen](TUC_Foerderung)
+- im Korrespondenzzirkel Mathematik (KZM)
+  
 [Onlineanmeldung für den KZM](https://www.sachsen.schule/~bezirkskomitee/Onlineanmeldung.htm)
 
 # Aktuelle KZM-Aufgabenserien
