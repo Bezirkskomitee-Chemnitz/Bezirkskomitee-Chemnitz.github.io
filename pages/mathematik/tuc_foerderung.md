@@ -1,6 +1,6 @@
 ---
 title: Mathematische Spitzenförderung an der TU Chemnitz
-permalink: mathematik/TUC_Foerderung/
+permalink: mathematik/tuc_foerderung/
 date: 2023-09-17
 ---
 

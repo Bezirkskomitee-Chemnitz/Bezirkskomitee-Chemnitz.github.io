@@ -1,4 +1,5 @@
 ---
+title: Inhaltlich Verantwortlicher
 permalink: mathematik/verantwortung/
 date: 2023-03-06
 ---
