@@ -1,7 +1,7 @@
 ---
 title: Mathematikseminar Klassenstufe 7 und 8
 permalink: mathematik/mathematikseminar/
-date: 2023-21-09
+date: 2023-09-21
 ---
 
 # Das Mathematikseminar für Klassenstufe 7 und 8
