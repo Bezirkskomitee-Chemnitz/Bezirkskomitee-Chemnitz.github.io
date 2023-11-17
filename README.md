@@ -8,13 +8,20 @@
   - [Neue Seite erstellen](#neue-seite-erstellen)
   - [Seite bearbeiten](#seite-bearbeiten)
 - [Seitenmenü](#seitenmenü)
+  - [Konfiguration der Einträge](#konfiguration-der-einträge)
   - [Neuen Eintrag im Seitenmenü ergänzen](#neuen-eintrag-im-seitenmenü-ergänzen)
   - [Eintrag im Seitenmenü bearbeiten](#eintrag-im-seitenmenü-bearbeiten)
 - [Posts](#posts)
+  - [Konfiguration der Posts](#konfiguration-der-posts)
   - [Neuen Post erstellen](#neuen-post-erstellen)
   - [Post bearbeiten](#post-bearbeiten)
 - [Dokumentation für verwendete Formate](#dokumentation-für-verwendete-formate)
+  - [WEBP](#webp)
+  - [PNG](#png)
+  - [GIF](#gif)
+  - [JPG, JPEG](#jpg-jpeg)
   - [YAML](#yaml)
+  - [HTML](#html)
   - [Markdown](#markdown)
 
 
@@ -80,12 +87,16 @@ Im folgenden gibt es kleine Erklärung zu einigen Ordnern und Dateien, die Sie b
 
 ## Seitenmenü
 
+### Konfiguration der Einträge
+
 ### Neuen Eintrag im Seitenmenü ergänzen
 
 ### Eintrag im Seitenmenü bearbeiten
 
 
 ## Posts
+
+### Konfiguration der Posts
 
 ### Neuen Post erstellen
 
@@ -94,6 +105,16 @@ Im folgenden gibt es kleine Erklärung zu einigen Ordnern und Dateien, die Sie b
 
 ## Dokumentation für verwendete Formate
 
+### WEBP
+
+### PNG
+
+### GIF
+
+### JPG, JPEG
+
 ### YAML
+
+### HTML
 
 ### Markdown
