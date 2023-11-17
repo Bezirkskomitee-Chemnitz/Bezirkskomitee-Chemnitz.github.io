@@ -38,7 +38,7 @@ function get_cookie(name) {
 
 // theme functions
 function to_theme(theme) {
-  return theme === "dark" ? "dark" : "light";
+  return (theme === "dark") ? "dark" : "light";
 }
 
 function set_theme(theme) {
@@ -65,6 +65,7 @@ function get_debug() {
 $(document).ready(function () {
   // update theme from cookie
   set_theme(get_theme());
+  set_debug(get_cookie("debug"));
 
   // add 'no_icon' class to links including images
   function parent_no_icon(element) { $(element).parent().addClass("no_icon"); }
@@ -81,7 +82,9 @@ $(document).ready(function () {
 
   // functionality for debug switch button
   $(".debug-switch").on("click touch", (evt) => {
-    set_debug(!get_debug());
+    var new_debug_state = !get_debug();
+    set_cookie("debug", new_debug_state, 1, "y");
+    set_debug(new_debug_state);
   });
 
   // functionality for theme selector button
