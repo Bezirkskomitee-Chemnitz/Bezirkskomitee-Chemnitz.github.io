@@ -22,7 +22,8 @@ Bildungsagenturt Chemnitz den Gymnasien und Einrichtungen des Zweiten Bildungswe
 Teilnehmer wählen im Vorfeld die Experimente aus und arbeiten dann in Kleingruppen zusammen.
 Den Abschluss der Sommerschule bildet eine Vorlesung zu aktuellen Erkenntnissen der Physik oder Astrophysik.
 
-Ansprechpartner: Frau [Dr. Wanke](mailto: martina.wanke@physik.tu-chemnitz.de)
+Ansprechpartner: Frau Dr. Wanke<br>
+E-Mail: {% include email.html email="martina.wanke@physik.tu-chemnitz.de" %}
 
 ## Korrespondenzzirkel Physik
 
