@@ -164,7 +164,7 @@ Einige Strukturen können nicht mit einfachem [Markdown](#markdown) umgesetzt we
 
 Bspw. können Sie folgendes Jekyll-Template für geschützte E-Mails verwenden:
 
-```jinja
+```liquid
 {% include email.html email="email@example.de" %}
 ```
 
