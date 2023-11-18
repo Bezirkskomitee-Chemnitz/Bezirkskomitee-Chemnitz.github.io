@@ -141,7 +141,7 @@ Für die Formatierung des Inhalts sollte [Markdown](#markdown) verwendet werden.
 
 Einfache [HTML](#html) Elemente können ebenfalls verwendet werden. Damit können z.B. geschützte Leerzeichen (`&nbsp;`) oder Zeilenumbrüche (`<br>`) realisiert werden, oder bspw. etwas komplexere Tabellen umgesetzt werden. Ein HTML-Tag kann theoretisch auch Attribute enthalten, die das Aussehen oder Verhalten ändern, dadurch kann aber auch das ganze Design der Webseite (negativ) beeinflusst werden. Also bitte möglichst wenige bzw. keine Designändernde Attribute bei HTML-Tags verwenden.
 
-Für einige Elemente 
+Einige Strukturen können nicht mit einfachem [Markdown](#markdown) umgesetzt werden oder existieren gar nicht erst. Dann können Sie [HTML](#html) verwenden oder es gibt bereits ein [Jekyll-Template](#jekyll-templates), welches die Verwendung für Sie vereinfacht (und die wartbarkeit und erweiterbarkeit für mich vereinfacht).
 
 ## Seitenmenü
 
