@@ -110,7 +110,7 @@ Im Header einer jeden Seite werden Seitenspezifische Eigenschaften konfiguriert.
 
 **Beispiel:**
 
-```
+```yml
 ---
 title: 'Förderung: "MINT"' 
 permalink: mathematik/foerderung_mint/
