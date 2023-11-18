@@ -14,9 +14,12 @@ url: "https://bezirkskomitee-chemnitz.github.io" # the base hostname & protocol 
 repository: "https://github.com/Bezirkskomitee-Chemnitz/Bezirkskomitee-Chemnitz.github.io" # the github repository
 
 # build settings
-theme: minima # modified
+# theme: "minima"       # this website doesn't use any theme -> usage also removed in Gemfile
 plugins:
   - jekyll-feed
+  - jekyll-redirect-from
+whitelist:
+  - jekyll-redirect-from
 
 # social badges
 github_username:
