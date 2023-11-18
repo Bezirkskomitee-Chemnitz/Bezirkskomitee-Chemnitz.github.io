@@ -106,7 +106,7 @@ Entsprechend der Fachrichtung liegt die Datei im Ordner `/pages/mathematik`. Der
 
 ### Seiten Header
 
-Im Header einer jeden Seite werden Seitenspezifische Eigenschaften konfiguriert. Mindestens der Titel (`title`), die URL (`permalink`) und das letzte Änderungsdatum (`date`) sollten dort gesetzt werden. Der Header wird am Anfang und Ende mit drei Bindestrichen (`---`) abgegrenzt und muss ganz am Anfang der Datei stehen.
+Im Header einer jeden Seite werden Seitenspezifische Eigenschaften konfiguriert. Mindestens der Titel (`title`), die URL (`permalink`) und das letzte Änderungsdatum (`date`) sollten dort gesetzt werden. Der Header wird am Anfang und Ende mit drei Bindestrichen (`---`) abgegrenzt und muss ganz am Anfang der Datei stehen. Der Header benutzt das [YAML](#yaml) Format.
 
 **Beispiel:**
 
@@ -118,7 +118,7 @@ date: 2023-11-18
 ---
 ```
 
-**Formatierungregeln:**
+**Basis Attribute:**
 
 `title`:
 - Darf im Prinzip alle Zeichen enthalten; aber Doppelpunkt (`:`), einfaches (`'`) und doppeltes (`"`) Hochkommata sollten vermieden werden.
@@ -134,6 +134,23 @@ date: 2023-11-18
 - Sollte das Datum enthalten, an dem die letzte inhaltliche Änderung stattgefunden hat.
 - Format: `JJJJ-MM-TT`
 - **Achtung:** Wenn hier ein nicht mögliches Datum steht, gibt es einen Fehler und die gesamte Webseite kann nicht korrekt generiert werden! Bspw. weil Monat und Tag ausversehen vertauscht wurde.  
+
+**Weitere Attribute:**
+
+`keywords`:
+- Suchmaschinen wie Google oder Bing beziehen unter Anderem die von Webseiten festgelegten Stichworte (`keywords`) ein, um deren Relevanz zu beurteilen und die Seite schlussendlich in den Suchergebnissen anzuzeigen oder eben nicht. Daher können Sie hier einige kurze Stichworte auflisten, die grob den Inhalt dieser Seite beschreiben.
+- Groß- und Kleinschreibung ist nicht relevant, Sonderzeichen können verwendet werden und einzelne Stichworte müssen mit einem Komma (`,`) voneinander getrennt werden. 
+- Bsp.: `mathematik, förderung, mint`
+- Jede Seite der Webseite hat immer folgende Stichworte: `bezirkskomitee, chemnitz` 
+
+`language`:
+- Dieses Attribut dient (aktuell noch) nur einer Suchmaschine als Hinweis, in welcher Sprache der Inhalt der Seite geschrieben ist.
+- Standardmäßig ist die Sprache einer Seite auf `de` für Deutsch gesetzt.
+- Bspw. könnte die Sprache auch auf `en` für Englisch gesetzt werden.
+
+`author`:
+- Hier könnten die Namen der (Haupt-)Authoren einer Seite gelistet werden.
+- Bisher werden die Authoren nicht im Design beachtet und daher nicht auf der Seite angezeigt. Für Suchmaschinen sind die Authoren dennoch sichtbar.
 
 ### Seite bearbeiten
 
