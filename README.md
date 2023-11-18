@@ -120,7 +120,7 @@ date: 2023-11-18
 
 `title`:
 - Darf im Prinzip alle Zeichen enthalten; aber Doppelpunkt (`:`), einfaches (`'`) und doppeltes (`"`) Hochkommata sollten vermieden werden.
-- Wenn Doppelpunkte (`:`) enthalten sind, muss der Text in einfachen (`'`) oder doppelten Hochkommata (`"`) geschrieben werden.
+- Wenn Doppelpunkte (`:`) enthalten sind, muss der Text zwischen einfachen (`'`) oder doppelten Hochkommata (`"`) geschrieben werden.
 - Hier müssen zum eingrenzen einfache Hochkommata (`'`) verwendet werden, da auch doppelte Hochkommata (`"`) im Titel vorhanden sind.
 
 `permalink`:
@@ -131,10 +131,17 @@ date: 2023-11-18
 `date`:
 - Sollte das Datum enthalten, an dem die letzte inhaltliche Änderung stattgefunden hat.
 - Format: `JJJJ-MM-TT`
-- Wenn hier ein nicht mögliches Datum steht, gibt es einen Fehler und die gesamte Webseite kann nicht korrekt generiert werden! Bspw. weil Monat und Tag ausversehen vertauscht wurde.  
+- **Achtung:** Wenn hier ein nicht mögliches Datum steht, gibt es einen Fehler und die gesamte Webseite kann nicht korrekt generiert werden! Bspw. weil Monat und Tag ausversehen vertauscht wurde.  
 
 ### Seite bearbeiten
 
+Der Inhalt jeder Seite kann bearbeitet werden, wobei bei relevanten inhaltlichen Änderungen das Datum (`date`) im [Header](#seiten-header) aktualisiert werden sollte. Die URL (`permalink`) im [Header](#seiten-header) sollte nachträglich nicht geändert werden, damit bereits bestehende Verlinkungen zu dieser Seite nicht 'kaputt' gehen.
+
+Für die Formatierung des Inhalts sollte [Markdown](#markdown) verwendet werden. Einen kleinen Guide gibt es [hier](#markdown). Damit können normal-, kursiv- oder fett-geschriebene Textabsätze; Stichpunkte, nummerierte Listen, Links, Code-Blöcke mit Highlighting, Überschriften, Tabellen, Bilder, uvm. erstellt werden.
+
+Einfache [HTML](#html) Elemente können ebenfalls verwendet werden. Damit können z.B. geschützte Leerzeichen (`&nbsp;`) oder Zeilenumbrüche (`<br>`) realisiert werden, oder bspw. etwas komplexere Tabellen umgesetzt werden. Ein HTML-Tag kann theoretisch auch Attribute enthalten, die das Aussehen oder Verhalten ändern, dadurch kann aber auch das ganze Design der Webseite (negativ) beeinflusst werden. Also bitte möglichst wenige bzw. keine Designändernde Attribute bei HTML-Tags verwenden.
+
+Für einige Elemente 
 
 ## Seitenmenü
 
