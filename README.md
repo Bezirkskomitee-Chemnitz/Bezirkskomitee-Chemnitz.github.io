@@ -79,10 +79,10 @@ Alle Seiten der Webseite liegen im Ordner `/pages`. Für die Übersichtlichkeit 
 **Regeln für die Benennung:**<br>
 Der Titel einer Seite und die finale URL bzw. der Dateiname der Seite sind *nicht von einander abhängig* und können verschieden sein; aber der Dateiname inkl. Dateipfad bestimmen zu teilen die URL.
 <br>
-Der Dateiname darf keine Leerzeichen oder Sonderzeichen enthalten und sollte möglichst kurz gehalten werden. Der Dateiname muss auf `.md` enden. Der Titel sollte aussagekräftig und nicht zu lang sein. Es gibt keine Feste Längenbegrenzung, aber mehr als 100 Zeichen sollten es nicht sein.
+Der Dateiname darf keine Leerzeichen oder Sonderzeichen enthalten und sollte möglichst kurz gehalten werden. Im Prinzip sind also nur kleine (ANSI) Buchstaben und Unterstrich (`_`) und Bindestrich (`-`) erlaubt. Der Dateiname muss auf `.md` enden, da es eine [Markdown](#markdown) Datei ist. Der Titel sollte aussagekräftig und nicht zu lang sein. Es gibt keine Feste Längenbegrenzung, aber mehr als 100 Zeichen sollten es nicht sein.
 
 **Verwendete Formate:**<br>
-Der meiste Inhalt kann mit sogenanntem [Markdown](#markdown) formatiert werden. Für manche Strukturen existieren eigene [Jekyll-Templates](#jekyll-templates) die verwendet werden können. Sie können aber auch standard [HTML](#html) verwenden.
+Der meiste Inhalt kann mit sogenanntem [Markdown](#markdown) formatiert werden. Für manche Strukturen existieren eigene [Jekyll-Templates](#jekyll-templates) die verwendet werden können. Sie können aber auch standard [HTML](#html) nutzen. Mehr dazu am Ende des Kapitels [Seite bearbeiten](#seite-bearbeiten).
 
 ### Neue Seite erstellen
 
@@ -100,7 +100,9 @@ bezirkskomitee-chemnitz.github.io
 - Titel: `Förderung: "MINT"`
 - URL: `mathematik/foerderung_mint/`
 
-...
+Der Titel, der später automatisch als Überschrift auf der Seite angezeigt wird, soll `Förderung: "MINT"` sein. Außerdem soll diese Seite Teil der `Mathematik` Fachrichtung sein und dort auch im Seitenmenü angezeigt werden.
+
+Entsprechend der Fachrichtung liegt die Datei im Ordner `/pages/mathematik`. Der Titel enthält in diesem Beispiel Sonderzeichen und Leerzeichen; der Dateiname darf aber im Prinzip nur aus kleinen (ANSI) Buchstaben und Unterstrich (`_`) und Bindestrich (`-`) bestehen. Also nennen wir die Datei bspw. `foerderung_mint.md`.
 
 ### Seiten Header
 
