@@ -4,8 +4,6 @@ permalink: mathematik/tuc_foerderung/
 date: 2023-09-17
 ---
 
-# Mathematische Spitzenförderung an der TU Chemnitz
-
 Für Schülerinnen und Schüler aus der Chemnitzer Region bietet die TU
 Chemnitz ab der Klassenstufe 9 die Möglichkeit, schuljahrbegleitend an speziellen
 Förderkursen im Fachgebiet Mathematik teilzunehmen. Diese richten sich an

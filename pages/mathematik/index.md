@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Mathematik
 # the url for the faculty navigation link is configured within the topnav and must be the same as this permalink
 permalink: mathematik/
 date: 2022-10-26

@@ -3,7 +3,7 @@ layout: compress
 ---
 
 <html lang="{{ page.language | default: site.language | default: 'de' }}"
-  data-theme="{% if site.dark_mode %}dark{% else %}light{% endif %}" {% if jekyll.environment !='production' %}data-debug="true" {% endif %}>
+  data-theme="{% if site.dark_mode %}dark{% else %}light{% endif %}" {% if jekyll.environment != 'production' %}data-debug="true" {% endif %}>
 
 {% include head.liquid %}
 
@@ -13,10 +13,17 @@ layout: compress
   <div {% if page.faculty %}class="row" {% endif %}>
     {% if page.faculty %}{% include sidenav.liquid %}{% endif %}
     <main>
-      <h{{ site.kramdown.header_offset }}>
-        {{ page.title }}
-      </h{{ site.kramdown.header_offset }}>
-      
+      {% assign faculty = site.topnav | where: 'faculty', page.faculty %}
+      {% for e in faculty %}{% assign baseurl = e.url %}{% endfor %}
+      {% assign is_index_page = false %}
+      {% if baseurl contains page.permalink %}{% assign is_index_page = true %}{% endif %}
+
+      {% if page.printed_title != false and is_index_page == false %}
+        <h{{ site.kramdown.header_offset }}>
+          {{ page.printed_title | default: page.title }}
+        </h{{ site.kramdown.header_offset }}>
+      {% endif %}
+
       {{ content }}
     </main>
   </div>
