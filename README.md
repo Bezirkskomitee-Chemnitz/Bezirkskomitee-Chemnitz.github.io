@@ -164,6 +164,10 @@ Einige Strukturen können nicht mit einfachem [Markdown](#markdown) umgesetzt we
 
 ## Seitenmenü
 
+Wenn Sie eine neue Seite erstellt haben, dann sollte diese wahrscheinlich auch über das Seitenmenü erreichbar sein. Ebenso könnten Sie aber auch externe URLs im Seitenmenü ergänzen. Im Ordner `/_data` in der Datei `sidenav.yml` steht im [YAML](#yaml) Format, welche Einträge es in den Seitenmenüs der einzelnen Fachrichtungen gibt.
+
+...
+
 ### Neuen Eintrag im Seitenmenü ergänzen
 
 ### Konfiguration der Einträge
