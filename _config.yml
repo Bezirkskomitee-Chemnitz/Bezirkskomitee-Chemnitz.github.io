@@ -1,5 +1,5 @@
 # command for local build:
-#   bundle exec jekyll serve -I
+#   bundle exec jekyll serve -I -t --safe
 
 title: Bezirkskomitee Chemnitz
 email:
