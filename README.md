@@ -162,6 +162,12 @@ Einfache [HTML](#html) Elemente können ebenfalls verwendet werden. Damit könne
 
 Einige Strukturen können nicht mit einfachem [Markdown](#markdown) umgesetzt werden oder existieren gar nicht erst. Dann können Sie [HTML](#html) verwenden oder es gibt bereits ein [Jekyll-Template](#jekyll-templates), welches die Verwendung für Sie vereinfacht (und die wartbarkeit und erweiterbarkeit für mich vereinfacht).
 
+Bspw. können Sie folgendes Jekyll-Template für geschützte E-Mails verwenden:
+
+```jinja
+{% include email.html email="email@example.de" %}
+```
+
 ## Seitenmenü
 
 Wenn Sie eine neue Seite erstellt haben, dann sollte diese wahrscheinlich auch über das Seitenmenü erreichbar sein. Ebenso könnten Sie aber auch externe URLs im Seitenmenü ergänzen. Im Ordner `/_data` in der Datei `sidenav.yml` steht im [YAML](#yaml) Format, welche Einträge es in den Seitenmenüs der einzelnen Fachrichtungen gibt.
