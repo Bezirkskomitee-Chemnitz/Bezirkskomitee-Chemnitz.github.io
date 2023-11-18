@@ -140,8 +140,8 @@ date: 2023-11-18
 `keywords`:
 - Suchmaschinen wie Google oder Bing beziehen unter Anderem die von Webseiten festgelegten Stichworte (`keywords`) ein, um deren Relevanz zu beurteilen und die Seite schlussendlich in den Suchergebnissen anzuzeigen oder eben nicht. Daher können Sie hier einige kurze Stichworte auflisten, die grob den Inhalt dieser Seite beschreiben.
 - Groß- und Kleinschreibung ist nicht relevant, Sonderzeichen können verwendet werden und einzelne Stichworte müssen mit einem Komma (`,`) voneinander getrennt werden. 
-- Bsp.: `mathematik, förderung, mint`
-- Jede Seite der Webseite hat immer folgende Stichworte: `bezirkskomitee, chemnitz` 
+- Bsp.: `förderung, mint`
+- Jede Seite der Webseite hat immer folgende Stichworte: `bezirkskomitee, chemnitz, wettbewerbe` und den Fachbereich (z.B. `mathematik`)
 
 `language`:
 - Dieses Attribut dient (aktuell noch) nur einer Suchmaschine als Hinweis, in welcher Sprache der Inhalt der Seite geschrieben ist.

@@ -1,6 +1,9 @@
 <head>
+  {% assign faculty = site.topnav | where: 'faculty', page.faculty %}
+  {% for e in faculty %}{% assign faculty_name = e.name %}{% endfor %}
+  
   <meta charset="utf-8">
-  <meta name="keywords" content="{{ site.keywords }}, {{ page.keywords }}">
+  <meta name="keywords" content="{{ site.keywords }}, {{ faculty_name | downcase }}, {{ page.keywords }}">
   <meta name="author" content="{{ page.author }}">
   <meta name="robots" content="all">
   <meta name="referrer" content="origin">
