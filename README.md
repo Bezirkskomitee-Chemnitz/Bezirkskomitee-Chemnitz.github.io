@@ -77,14 +77,16 @@ Im folgenden gibt es kleine Erklärung zu einigen Ordnern und Dateien, die Sie b
 Alle Seiten der Webseite liegen im Ordner `/pages`. Für die Übersichtlichkeit sind die Seiten noch in Unterordnern nach Fachrichtung sortiert.
 
 **Regeln für die Benennung:**<br>
-Der Titel einer Seite, die finale URL der Seite und der Dateiname sind *nicht von einander abhängig* und können verschieden sein. So sollte sowohl der Dateiname als auch die URL keine Leerzeichen oder Sonderzeichen enthalten, und möglichst kurz gehalten werden. Der Titel sollte nicht zu lang aber aussagekräftig sein. In der URL sollten nur kleine Buchstaben verwendet werden. Der Dateiname muss auf `.md` enden.
+Der Titel einer Seite und die finale URL bzw. der Dateiname der Seite sind *nicht von einander abhängig* und können verschieden sein; aber der Dateiname inkl. Dateipfad bestimmen zu teilen die URL.
+<br>
+Der Dateiname darf keine Leerzeichen oder Sonderzeichen enthalten und sollte möglichst kurz gehalten werden. Der Dateiname muss auf `.md` enden. Der Titel sollte aussagekräftig und nicht zu lang sein. Es gibt keine Feste Längenbegrenzung, aber mehr als 100 Zeichen sollten es nicht sein.
 
 **Verwendete Formate:**<br>
-Der meiste Inhalt kann mit sogenanntem [Markdown](#markdown) formatiert werden. Für manche Strukturen existieren [Jekyll-Templates](#jekyll-templates) die verwendet werden können. Sie können aber auch standard [HTML](#html) verwenden.
+Der meiste Inhalt kann mit sogenanntem [Markdown](#markdown) formatiert werden. Für manche Strukturen existieren eigene [Jekyll-Templates](#jekyll-templates) die verwendet werden können. Sie können aber auch standard [HTML](#html) verwenden.
 
 ### Neue Seite erstellen
 
-Wenn Sie eine neue Seite erstellen möchten, dann müssen Sie im entsprechenden Unterordner der Fachrichtung eine neue Datei erstellen. 
+Wenn Sie eine neue Seite erstellen möchten, dann müssen Sie im entsprechenden Unterordner der Fachrichtung eine neue Datei erstellen. Und folgendes beachten, hier an einem Beispiel veranschaulicht:
 
 **Beispiel:**
 
@@ -98,19 +100,19 @@ bezirkskomitee-chemnitz.github.io
 - Titel: `Förderung: "MINT"`
 - URL: `mathematik/foerderung_mint/`
 
-Der Titel ist aussagekräftig, kann Sonderzeichen enthalten und ist nicht zu lang. Es gibt keine feste Grenze für die Länge eines Titels, aber mehr als 100 Zeichen sollten es nicht sein. Der Dateiname ebenfalls aussagekräftig, ist schön kurz, endet auf `.md` (da es eine Markdown Datei ist) und enthält keine Sonderzeichen oder Leerzeichen. Die URL entspricht hier dem Dateinamen, muss sie aber nicht unbedingt. Wichtig ist, dass die URL erst aus der Fachrichtung besteht, hier `mathematik/` und dann der Seitenspezifische Teil kommt, hier `tuc_foerderung/` (ohne Dateiendung!). Titel und URL werden im sogenannten *Header* der Seite definiert. Weiteres dazu im nächsten Kapitel:
+...
 
 ### Seiten Header
 
-Im Header einer jeden Seite werden Seitenspezifische Eigenschaften konfiguriert. Mindestens der Titel (`title`), die URL (`permalink`) und das letzte Änderungsdatum (`date`) sollten dort gesetzt werden. Der Header wird am Anfang und Ende mit `---` abgegrenzt und muss ganz am Anfang der Datei stehen.
+Im Header einer jeden Seite werden Seitenspezifische Eigenschaften konfiguriert. Mindestens der Titel (`title`), die URL (`permalink`) und das letzte Änderungsdatum (`date`) sollten dort gesetzt werden. Der Header wird am Anfang und Ende mit drei Bindestrichen (`---`) abgegrenzt und muss ganz am Anfang der Datei stehen.
 
-**fiktives Beispiel:**
+**Beispiel:**
 
 ```
 ---
-title: Mathematische Spitzenförderung an der TU Chemnitz
-permalink: mathematik/tuc_foerderung/
-date: 2023-09-17
+title: 'Förderung: "MINT"' 
+permalink: mathematik/foerderung_mint/
+date: 2023-11-18
 ---
 ```
 
@@ -118,13 +120,18 @@ date: 2023-09-17
 
 `title`:
 - Darf im Prinzip alle Zeichen enthalten; aber Doppelpunkt (`:`), einfaches (`'`) und doppeltes (`"`) Hochkommata sollten vermieden werden.
-- Wenn ein Doppelpunkt (`:`) enthalten ist, muss der Text in einfachen (`'`) oder doppelten Hochkommata (`"`) geschrieben werden. 
+- Wenn Doppelpunkte (`:`) enthalten sind, muss der Text in einfachen (`'`) oder doppelten Hochkommata (`"`) geschrieben werden.
+- Hier müssen zum eingrenzen einfache Hochkommata (`'`) verwendet werden, da auch doppelte Hochkommata (`"`) im Titel vorhanden sind.
 
 `permalink`:
-- Besteht aus 
+- Bezeichnet die URL und muss im Prinzip den Dateipfad und -namen abbilden.
+- Am Anfang darf *kein* Schrägstrich (`/`), am Ende *muss* einer stehen.
+- Erst kommt der Unterordner der Fachrichtung (hier: `mathematik`), dann ein `/`, dann der Dateiname ohne Endung (hier: `foerderung_mint`) und dann wieder ein `/`.
 
 `date`:
-- d
+- Sollte das Datum enthalten, an dem die letzte inhaltliche Änderung stattgefunden hat.
+- Format: `JJJJ-MM-TT`
+- Wenn hier ein nicht mögliches Datum steht, gibt es einen Fehler und die gesamte Webseite kann nicht korrekt generiert werden! Bspw. weil Monat und Tag ausversehen vertauscht wurde.  
 
 ### Seite bearbeiten
 
