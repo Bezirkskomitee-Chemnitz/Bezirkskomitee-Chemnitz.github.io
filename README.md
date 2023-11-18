@@ -54,7 +54,7 @@ bezirkskomitee-chemnitz.github.io
 └── _config.yml
 ```
 
-Im folgenden gibt es kleine Erklärung zu einigen Ordnern und Dateien, die Sie bearbeiten  dürfen. Dateien und Ordner die hier nicht gelistet sind, sollten nicht verändert werden, damit die Webseite fehlerfrei funktionieren kann.
+Im folgenden gibt es kleine Erklärung zu einigen Ordnern und Dateien, die Sie bearbeiten  dürfen. Dateien und Ordner die hier nicht gelistet sind, sollten nicht verändert werden, damit die Webseite fehlerfrei funktionieren kann. Ebenso sollten bestehende Dateien und Ordner nicht umbenannt werden, damit darauf aufbauende Logik und Links nicht 'kaputt' gehen. 
 
 | Ordner | Datei | Erklärung | Formate |
 |:---|:---|:---|:---|
@@ -84,10 +84,27 @@ Der meiste Inhalt kann mit sogenanntem [Markdown](#markdown) formatiert werden. 
 
 ### Neue Seite erstellen
 
-Wenn Sie eine neue Seite erstellen möchten, dann müssen Sie im entsprechenden Unterordner der Fachrichtung eine neue Datei erstellen. *Hier ein Beispiel:*
+Wenn Sie eine neue Seite erstellen möchten, dann müssen Sie im entsprechenden Unterordner der Fachrichtung eine neue Datei erstellen. 
+
+**Beispiel:**
 
 ```
+bezirkskomitee-chemnitz.github.io
+└── pages
+    └── mathematik
+        └── foerderung_mint.md
 ```
+
+- Titel: `Förderung: "MINT"`
+- URL: `mathematik/foerderung_mint/`
+
+Der Titel ist aussagekräftig, kann Sonderzeichen enthalten und ist nicht zu lang. Es gibt keine feste Grenze für die Länge eines Titels, aber mehr als 100 Zeichen sollten es nicht sein. Der Dateiname ebenfalls aussagekräftig, ist schön kurz, endet auf `.md` (da es eine Markdown Datei ist) und enthält keine Sonderzeichen oder Leerzeichen. Die URL entspricht hier dem Dateinamen, muss sie aber nicht unbedingt. Wichtig ist, dass die URL erst aus der Fachrichtung besteht, hier `mathematik/` und dann der Seitenspezifische Teil kommt, hier `tuc_foerderung/` (ohne Dateiendung!). Titel und URL werden im sogenannten *Header* der Seite definiert. Weiteres dazu im nächsten Kapitel:
+
+### Seiten Header
+
+Im Header einer jeden Seite werden Seitenspezifische Eigenschaften konfiguriert. Mindestens der Titel (`title`), die URL (`permalink`) und das letzte Änderungsdatum (`date`) sollten dort gesetzt werden. Der Header wird am Anfang und Ende mit `---` abgegrenzt und muss ganz am Anfang der Datei stehen.
+
+**fiktives Beispiel:**
 
 ```
 ---
@@ -97,7 +114,17 @@ date: 2023-09-17
 ---
 ```
 
-### Seiten Header
+**Formatierungregeln:**
+
+`title`:
+- Darf im Prinzip alle Zeichen enthalten; aber Doppelpunkt (`:`), einfaches (`'`) und doppeltes (`"`) Hochkommata sollten vermieden werden.
+- Wenn ein Doppelpunkt (`:`) enthalten ist, muss der Text in einfachen (`'`) oder doppelten Hochkommata (`"`) geschrieben werden. 
+
+`permalink`:
+- Besteht aus 
+
+`date`:
+- d
 
 ### Seite bearbeiten
 

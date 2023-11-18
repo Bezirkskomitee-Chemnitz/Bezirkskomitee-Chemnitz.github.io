@@ -161,11 +161,12 @@ hr {
   border-top: var(--default-border);
 }
 
-h1 {
+#site-title {
   margin-top: 0;
   color: var(--title-color);
 }
 
+h1,
 h2,
 h3,
 h4,
@@ -179,7 +180,7 @@ header {
   margin: 1em 0;
 }
 
-header>h1 {
+header>#site-title {
   margin: 0;
 }
 
@@ -439,7 +440,7 @@ body {
     width: 98%;
   }
 
-  header>h1 {
+  header>#site-title {
     width: 30%;
   }
 

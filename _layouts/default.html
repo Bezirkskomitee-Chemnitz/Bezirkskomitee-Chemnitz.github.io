@@ -13,6 +13,10 @@ layout: compress
   <div {% if page.faculty %}class="row" {% endif %}>
     {% if page.faculty %}{% include sidenav.liquid %}{% endif %}
     <main>
+      <h{{ site.kramdown.header_offset }}>
+        {{ page.title }}
+      </h{{ site.kramdown.header_offset }}>
+      
       {{ content }}
     </main>
   </div>
