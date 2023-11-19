@@ -1,4 +1,5 @@
 # How-To <!-- omit in toc -->
+<!-- regex word counter: [^#][a-z-_äüöß]{2,}[ :;,.] -->
 
 **Inhaltsverzeichnis:**
 
@@ -24,7 +25,6 @@
   - [Markdown](#markdown)
   - [HTML](#html)
   - [Jekyll Templates](#jekyll-templates)
-
 
 ## Datei- und Ordnerstruktur verstehen
 
