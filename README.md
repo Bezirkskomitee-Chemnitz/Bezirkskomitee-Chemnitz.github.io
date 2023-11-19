@@ -152,6 +152,16 @@ date: 2023-11-18
 - Hier könnten die Namen der (Haupt-)Authoren einer Seite gelistet werden.
 - Bisher werden die Authoren nicht im Design beachtet und daher nicht auf der Seite angezeigt. Für Suchmaschinen sind die Authoren dennoch sichtbar.
 
+`redirect_from`:
+- Hier können Sie alternative URLs ergänzen, die den Nutzer zu dieser Seite weiterleiten. Wenn Sie bspw. den `permalink` der Seite ändern, kann der vorherige Eintrag hier ergänzt werden, damit bestehende ältere Links weiterhin funktionieren.
+- Dieses Attribut kann einen einzelnen Wert enthalten (wie bei `permalink`), oder eine Liste von Werten. Bsp.:
+
+```yml
+redirect_from:
+  - /mathematik/foerderung_alternativ_link_1/
+  - /mathematik/foerderung_alternativ_link_2/
+```
+
 ### Seite bearbeiten
 
 Der Inhalt jeder Seite kann bearbeitet werden, wobei bei relevanten inhaltlichen Änderungen das Datum (`date`) im [Header](#seiten-header) aktualisiert werden sollte. Die URL (`permalink`) im [Header](#seiten-header) sollte nachträglich nicht geändert werden, damit bereits bestehende Verlinkungen zu dieser Seite nicht 'kaputt' gehen.
