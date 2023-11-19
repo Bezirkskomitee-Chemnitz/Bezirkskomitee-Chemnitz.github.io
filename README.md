@@ -264,8 +264,8 @@ Ein geschütztes Leerzeichen zwischen zwei Worten sorgt dafür, dass an dieser S
 
 Der verfügbare Platz für das Seitenmenü ist relativ schmal, daher kann es passieren, dass zu lange Worte (ab ca. 15 Zeichen) über den Rand hinausragen oder der Browser an irgendeiner Stelle einfach ein Bindestrich einfügt. Mit dem HTML-Sonderzeichen `&shy;` kann man selbst einen optionalen Bindestrich an einer sinnvollen Stelle im Wort einsetzen, damit wenn nötig das Wort an dieser Stelle umgebrochen wird.
 
-- Ohne optionale Bindestriche: Rindfleischetikettierungsüberwachungsaufgabenübertragungsgesetz
-- Mit optionalen Bindestrichen: Rindfleischetikettierungs&shy;überwachungsaufgaben&shy;übertragungsgesetz
+- Ein sehr langes Wort ohne optionale Bindestriche: Rindfleischetikettierungsüberwachungsaufgabenübertragungsgesetz
+- Ein sehr langes Wort mit optionalen Bindestrichen: Rindfleischetikettierungs&shy;überwachungsaufgaben&shy;übertragungsgesetz
 
 ### Neuen Eintrag im Seitenmenü ergänzen
 
