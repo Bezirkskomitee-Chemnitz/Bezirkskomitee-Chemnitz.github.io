@@ -213,20 +213,48 @@ faculties:
       url: ""
 ```
 
-Mehr zum sehr oft verwendeten [YAML](#yaml) Format gibt es weiter unten zu lesen, aber vereinfacht gesagt, handelt es sich meistens um geordnete verschachtelte Stichpunkte. So befindet sich unter dem Stichpunkt `math` eine Liste von Stichpunkten, die Titel (`title`) und URL (`url`) der einzelnen Einträge im Seitenmenü enthalten. 
+Mehr zum sehr oft verwendeten [YAML](#yaml) Format gibt es weiter unten zu lesen, aber vereinfacht gesagt, handelt es sich meistens um geordnete verschachtelte Stichpunkte. So befindet sich unter dem Stichpunkt `math` eine Liste von Stichpunkten, die Titel (`title`) und URL (`url`) der einzelnen Einträge im Seitenmenü enthalten.
 
-Jeder Fachrichtung ist ein eindeutiges Schlüsselwort in der `_config.yml` Datei zugeordnet (darf *nicht* verändert werden!), welches unabhängig vom dargestellten Namen ist:
+Die Tiefe der Einrückung (mit je zwei Leerzeichen) ist hier sehr wichtig, weil nur dadurch die Zugehörigkeit in der Verschachtelung festgelegt wird. Ein neuer Eintrag wird mit einem Bindestrich (`-`) markiert und die Attribute eines Eintrages folgen ohne Bindestrich mit gleicher Einrückung. Leerzeilen sind optional und dienen nur der Lesbarkeit.
+
+Jeder Fachrichtung ist ein eindeutiges Schlüsselwort in der `_config.yml` Datei zugeordnet (darf nicht verändert werden!), welches unabhängig vom dargestellten Namen ist:
 
 - Mathematik: `math`
 - Physik: `physics`
 - Chemie: `chemistry`
 - Biologie: `biology`
 
-Bei den Fachrichtung `Chemie` und `Biologie` gibt es (noch) kein Seitenmenü, da deren Inhalte nicht auf dieser Webseite gehostet werden. Das Seitenmenü für die Fachrichtung `Physik` besteht nur aus der Startseite (leere URL: `url: ""`), da hier noch zu wenige Inhalte existieren für die weitere Seiten notwendig wären. Bei der Fachrichtung `Mathematik` 
+Bei den Fachrichtung `Chemie` und `Biologie` gibt es (noch) kein Seitenmenü, da deren Inhalte nicht auf dieser Webseite gehostet werden. Das Seitenmenü für die Fachrichtung `Physik` besteht nur aus der Startseite (leere URL: `url: ""`), da hier noch zu wenige Inhalte existieren für die weitere Seiten notwendig wären. Für die Fachrichtung `Mathematik` ist hier ein umfangreiches Seitenmenü definiert; u.a. mit externen URLs, einfachen Einträgen und verschachtelten Einträgen inkl. Sonderzeichen.
 
 ### Konfiguration der Einträge
 
+Es wird zwischen zwei verschiedenen Einträgen im Seitenmenü unterschieden, die beide aus einem Titel (`title`) und einer URL (`url`) oder einer externen URL (`external_url`) bestehen. Ein Eintrag kann auch eine Kategorie sein, die weitere Einträge (`items`) als Unterpunkte hat. Eine solche Kategorie kann auch eine eigene Seite (`url`) haben.
 
+**Beispiel:** ein Eintrag mit URL und einer mit externer URL
+
+```yml
+faculties:
+  math:
+    - title: Korrespondenzzirkel
+      url: kzm/
+    - title: Bundeswettbewerb Mathematik
+      external_url: https://www.mathe-wettbewerbe.de/bundeswettbewerb-mathematik/
+```
+
+**Beispiel:** eine Kategorie mit Einträgen
+
+```yml
+# Übrigens: so schreibt man Kommentare
+faculties:
+  math:
+    - title: Wettbewerbe
+      url: mathematik/wettbewerbe  # dieser URL Parameter ist optional, da nicht unbedingt jede Katgorie nochmal eine extra Seite benötigt 
+      items:
+        - title: Mathematik&shy;olympiade
+          url: olympiade/
+        - title: Känguru Wettbewerb
+          external_url: https://www.mathe-kaenguru.de/
+```
 
 ### Neuen Eintrag im Seitenmenü ergänzen
 
