@@ -115,6 +115,7 @@ Im Header einer jeden Seite werden Seitenspezifische Eigenschaften konfiguriert.
 title: 'Förderung: "MINT"' 
 permalink: mathematik/foerderung_mint/
 date: 2023-11-18
+# so können Sie hier übrigens Kommentare verwenden
 ---
 ```
 
@@ -272,6 +273,34 @@ Der verfügbare Platz für das Seitenmenü ist relativ schmal, daher kann es pas
 ### Neuen Eintrag im Seitenmenü ergänzen
 
 Nachdem Sie eine neue Seite erstellt haben, sollte diese nicht nur über eine Verlinkung auf einer anderen Seite erreichbar sein, sondern auch im Seitenmenü aufgelistet werden. Der im [Seiten-Header](#seiten-header) definierte `permalink` entscheidet darüber, unter welchem Seitenmenüeintrag Ihre Seite gelistet werden sollte; also bei welcher Fachrichtung.
+
+<span id="neuen-eintrag-im-seitenmenue-ergaenzen--beispiel">**Beispiel:**</span>
+
+Hier ist bspw. der [Seiten-Header](#seiten-header) der Datei `tuc_foerderung.md` im Ordner `/pages/mathematik`:
+```yml
+---
+title: Mathematische Spitzenförderung an der TU Chemnitz
+permalink: mathematik/tuc_foerderung/
+date: 2023-09-17
+---
+```
+
+Ein Link zu dieser Seite soll hier im Seitenmenü der Fachrichtung `Mathematik` angezeigt werden, da der `permalink` im [Seiten-Header](#seiten-header) mit `mathematik/` startet. Dieser Part der URL muss im Attribut `url` der Konfiguration weggelassen werden, da dieser automatisch auf Basis der Unterordnung des Stichpunktes `math` vervollständigt wird. Wichtig ist der Schrägstrich (`/`) am Ende der URL und keiner am Anfang. Der Eintrag `TUC Förderung` wird hier nach dem Eintrag `Korrespondenzzirkel` in Seitenmenü angezeigt werden, da sie auch in dieser Reihenfolge hier definiert werden.
+
+```yml
+# die folgenden beiden Zeilen dienen nur der vollständigkeit halber um die notwendige Einrückung zu verdeutlichen
+faculties:
+  math:
+    # ... darüber gelistete Einträge 
+    - title: Korrespondenzzirkel
+      url: kzm/
+
+    # diese beiden Zeilen müssten an gewünschter Stelle mit notw. Einrückung ergänzt werden
+    - title: TUC Förderung
+      url: tuc_foerderung/
+    
+    # ... darunter gelistete Einträge
+```
 
 ### Eintrag im Seitenmenü bearbeiten
 
