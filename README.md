@@ -8,8 +8,8 @@
   - [Seiten Header](#seiten-header)
   - [Seite bearbeiten](#seite-bearbeiten)
 - [Seitenmenü](#seitenmenü)
-  - [Neuen Eintrag im Seitenmenü ergänzen](#neuen-eintrag-im-seitenmenü-ergänzen)
   - [Konfiguration der Einträge](#konfiguration-der-einträge)
+  - [Neuen Eintrag im Seitenmenü ergänzen](#neuen-eintrag-im-seitenmenü-ergänzen)
   - [Eintrag im Seitenmenü bearbeiten](#eintrag-im-seitenmenü-bearbeiten)
 - [Posts](#posts)
   - [Neuen Post erstellen](#neuen-post-erstellen)
@@ -132,7 +132,7 @@ date: 2023-11-18
 
 `date`:
 - Sollte das Datum enthalten, an dem die letzte inhaltliche Änderung stattgefunden hat.
-- Format: `JJJJ-MM-TT`
+- Format: `JJJJ-MM-TT`; Bspw.: `2023-11-18` steht für den `18. November 2023`
 - **Achtung:** Wenn hier ein nicht mögliches Datum steht, gibt es einen Fehler und die gesamte Webseite kann nicht korrekt generiert werden! Bspw. weil Monat und Tag ausversehen vertauscht wurde.  
 
 **Weitere Attribute:**
@@ -213,9 +213,22 @@ faculties:
       url: ""
 ```
 
-### Neuen Eintrag im Seitenmenü ergänzen
+Mehr zum sehr oft verwendeten [YAML](#yaml) Format gibt es weiter unten zu lesen, aber vereinfacht gesagt, handelt es sich meistens um geordnete verschachtelte Stichpunkte. So befindet sich unter dem Stichpunkt `math` eine Liste von Stichpunkten, die Titel (`title`) und URL (`url`) der einzelnen Einträge im Seitenmenü enthalten. 
+
+Jeder Fachrichtung ist ein eindeutiges Schlüsselwort in der `_config.yml` Datei zugeordnet (darf *nicht* verändert werden!), welches unabhängig vom dargestellten Namen ist:
+
+- Mathematik: `math`
+- Physik: `physics`
+- Chemie: `chemistry`
+- Biologie: `biology`
+
+Bei den Fachrichtung `Chemie` und `Biologie` gibt es (noch) kein Seitenmenü, da deren Inhalte nicht auf dieser Webseite gehostet werden. Das Seitenmenü für die Fachrichtung `Physik` besteht nur aus der Startseite (leere URL: `url: ""`), da hier noch zu wenige Inhalte existieren für die weitere Seiten notwendig wären. Bei der Fachrichtung `Mathematik` 
 
 ### Konfiguration der Einträge
+
+
+
+### Neuen Eintrag im Seitenmenü ergänzen
 
 ### Eintrag im Seitenmenü bearbeiten
 
