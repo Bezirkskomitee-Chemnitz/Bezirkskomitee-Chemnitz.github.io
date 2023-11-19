@@ -17,10 +17,7 @@
   - [Konfiguration der Posts](#konfiguration-der-posts)
   - [Post bearbeiten](#post-bearbeiten)
 - [Dokumentation für verwendete Formate](#dokumentation-für-verwendete-formate)
-  - [WEBP](#webp)
-  - [PNG](#png)
-  - [GIF](#gif)
-  - [JPG, JPEG](#jpg-jpeg)
+  - [Bildformate](#bildformate)
   - [YAML](#yaml)
   - [Markdown](#markdown)
   - [HTML](#html)
@@ -120,11 +117,14 @@ date: 2023-11-18
 ```
 
 <span id="seiten-header--basis-attribute">**Basis Attribute:**</span>
+<br>
 
-`title`:
+`title`:<br>
+<span id="seiten-header--besondere-zeichen-im-wert">*hier mit besonderem Hinweis zur Verwendung von Hochkommata und Doppelpunkten im Wert*</span>
+
 - Darf im Prinzip alle Zeichen enthalten; aber Doppelpunkt (`:`), einfaches (`'`) und doppeltes (`"`) Hochkommata sollten vermieden werden.
 - Wenn Doppelpunkte (`:`) enthalten sind, muss der Text zwischen einfachen (`'`) oder doppelten Hochkommata (`"`) geschrieben werden.
-- Hier müssen zum eingrenzen einfache Hochkommata (`'`) verwendet werden, da auch doppelte Hochkommata (`"`) im Titel vorhanden sind.
+- Im obigen Bsp. müssen zum eingrenzen einfache Hochkommata (`'`) verwendet werden, da auch doppelte Hochkommata (`"`) im Titel vorhanden sind.
 
 `permalink`:
 - Bezeichnet die URL und muss im Prinzip den Dateipfad und -namen abbilden.
@@ -229,6 +229,8 @@ Jeder Fachrichtung ist ein eindeutiges Schlüsselwort in der `_config.yml` Datei
 
 Bei den Fachrichtung `Chemie` und `Biologie` gibt es (noch) kein Seitenmenü, da deren Inhalte nicht auf dieser Webseite gehostet werden. Das Seitenmenü für die Fachrichtung `Physik` besteht nur aus der Startseite (leere URL: `url: ""`), da hier noch zu wenige Inhalte existieren für die weitere Seiten notwendig wären. Für die Fachrichtung `Mathematik` ist hier ein umfangreiches Seitenmenü definiert; u.a. mit externen URLs, einfachen Einträgen und verschachtelten Einträgen inkl. Sonderzeichen.
 
+*Hier noch ein Kommentar zur [Verwendung von Hochkommata und Doppelpunkten](#seiten-header--besondere-zeichen-im-wert) im `title`.*
+
 ### Konfiguration der Einträge
 
 Es wird zwischen zwei verschiedenen Einträgen im Seitenmenü unterschieden, die beide aus einem Titel (`title`) und einer URL (`url`) oder einer externen URL (`external_url`) bestehen. Ein Eintrag kann auch eine Kategorie sein, die weitere Einträge (`items`) als Unterpunkte hat. Eine solche Kategorie kann auch eine eigene Seite (`url`) haben.
@@ -258,6 +260,8 @@ faculties:
         - title: Känguru Wettbewerb
           external_url: https://www.mathe-kaenguru.de/
 ```
+
+*Hier noch ein Kommentar zur [Verwendung von Hochkommata und Doppelpunkten](#seiten-header--besondere-zeichen-im-wert) im `title`.*
 
 <span id="konfiguration-der-eintraege--html-sonderzeichen">**HTML-Sonderzeichen:**</span>
 
@@ -302,8 +306,11 @@ faculties:
     # ... darunter gelistete Einträge
 ```
 
+*Hier noch ein Kommentar zur [Verwendung von Hochkommata und Doppelpunkten](#seiten-header--besondere-zeichen-im-wert) im `title`.*
+
 ### Eintrag im Seitenmenü bearbeiten
 
+Einen Eintrag im Seitenmenü zu bearbeiten, heißt z.B. den angezeigten Titel (`title`) oder die verlinkte URL (`url`) bzw. externe URL (`external_url`) zu ändern. Sie könnten aber auch die Position der Einträge ändern, in dem Sie deren Atrributblöcke nach oben oder unten in der Reihenfolge verschieden. Genaueres zur Syntax und weiteren Regeln steht im Kapitel [Konfiguration der Einträge](#konfiguration-der-einträge) und im Kapitel [Neuen Eintrag im Seitenmenü ergänzen](#neuen-eintrag-im-seitenmenü-ergänzen).
 
 ## Posts
 
@@ -316,13 +323,14 @@ faculties:
 
 ## Dokumentation für verwendete Formate
 
-### WEBP
+### Bildformate
 
-### PNG
-
-### GIF
-
-### JPG, JPEG
+| Format | Beschreibung |
+|:---:|:---|
+| <span id="png">PNG</span> | Besonders geeignet für Fotos oder Grafiken (mit Transparenz). Meistens etwas größerer Speicherbedarf als andere Formate (ca. 2&minus;7&nbsp;MB). Verlustfreie Komprimierung. |
+| <span id="jpg-jpeg">JPG, JPEG</span> | Besonders geeignet für Fotos, aber nicht für Grafiken (mit scharfen Kanten). Benötigt bei richtiger Kompressionsstufe sehr wenig Speicherplatz (ca. 0,1&minus;2&nbsp;MB). Verlustbehaftete Komprimierung, aber so, dass es meistens nicht sichtbar ist. |
+| <span id="gif">GIF</span> | Besonders geeignet für Grafiken (mit scharfen Kanten) oder animierten Bildern (mit wenig Farben). Benötigt bei Grafiken sehr wenig Speicherplatz (ca. 1&minus;5&nbsp;MB), bei animierten Bildern jedoch relativ viel (ca. 2&minus;15&nbsp;MB). Verlustbehaftete Komprimierung, vor Allem auf 256 Farben eingeschränkt und daher meistens deutlich sichtbar. |
+| <span id="webp">WEBP</span> | Besonders geeignet für Fotos oder Grafiken (mit Transparenz oder Animation). Benötigt sehr wenig Speicherplatz (ca. 0,1&minus;2&nbsp;MB). Wird aber nicht von allen Browsern unterstützt und kann meistens nicht auf dem PC angezeigt werden. |
 
 ### YAML
 
