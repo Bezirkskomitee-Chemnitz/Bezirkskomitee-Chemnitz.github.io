@@ -79,3 +79,15 @@ defaults:
     values:
       layout: default
       faculty: physics
+  
+  # just for completeness, even if these directories are not hosted on this page
+  - scope:
+      path: pages/chemie/*
+    values:
+      layout: default
+      faculty: chemistry
+  - scope:
+      path: pages/biologie/*
+    values:
+      layout: default
+      faculty: biology

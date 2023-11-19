@@ -170,9 +170,37 @@ Bspw. können Sie folgendes Jekyll-Template für geschützte E-Mails verwenden:
 
 ## Seitenmenü
 
-Wenn Sie eine neue Seite erstellt haben, dann sollte diese wahrscheinlich auch über das Seitenmenü erreichbar sein. Ebenso könnten Sie aber auch externe URLs im Seitenmenü ergänzen. Im Ordner `/_data` in der Datei `sidenav.yml` steht im [YAML](#yaml) Format, welche Einträge es in den Seitenmenüs der einzelnen Fachrichtungen gibt.
+Wenn Sie eine neue Seite erstellt haben, dann sollte diese wahrscheinlich auch über das Seitenmenü erreichbar sein. Ebenso können Sie aber auch externe URLs im Seitenmenü ergänzen. Im Ordner `/_data` in der Datei `sidenav.yml` steht im [YAML](#yaml) Format, welche Einträge es in den Seitenmenüs der einzelnen Fachrichtungen gibt.
 
-...
+Im Folgenden ein kurzer (unvollständiger) Auszug der Datei `sidenav.yml` mit Erklärung der Syntax:
+
+```yml
+faculties:
+  math:
+    - title: Home
+      url: ""
+
+    - title: Korrespondenzzirkel
+      url: kzm/
+
+    - title: Wettbewerbe
+      items:
+        - title: Mathematik&shy;olympiade
+          url: olympiade/
+        - title: Adam-Ries-Wettbewerb
+          url: adam-ries/
+
+        - title: Känguru Wettbewerb
+          external_url: https://www.mathe-kaenguru.de/
+
+    - title: Inhaltlich Verantwortlicher
+      url: verantwortung/
+  
+
+  physics:
+    - title: Home
+      url: ""
+```
 
 ### Neuen Eintrag im Seitenmenü ergänzen
 
