@@ -160,7 +160,7 @@ date: 2023-11-18
 permalink: mathematik/olympiade
 redirect_from:
   - mathematik/mathematikolympiade/
-  - mathematik/anderer_alternativer_link/
+  - mathematik/weiterer_alternativer_link/
 ```
 
 ### Seite bearbeiten
@@ -256,6 +256,17 @@ faculties:
           external_url: https://www.mathe-kaenguru.de/
 ```
 
+<span id="html-sonderzeichen">**HTML-Sonderzeichen:**</span>
+
+Wie Ihnen vlt. aufgefallen ist, steht beim Eintrag `Mathematikolympiade` so ein komisches `&shy;` zwischen den beiden Wortteilen. Diese Zeichenkombination ist ein sogenanntes [HTML-Sonderzeichen](#html-sonderzeichen). Damit können normalen Umlaute wie z.B. <code>&szlig;</code> mit `&szlig;` für HTML-Webseiten kodiert werden. Diese Kodierung ist hier nicht notwendig; aber es gibt andere praktische Sonderzeichen wie z.B. ein geschütztes Leerzeichen `&nbsp;` oder ein optionaler Bindestrich `&shy;`.
+
+Ein geschütztes Leerzeichen zwischen zwei Worten sorgt dafür, dass an dieser Stelle kein automatischer Zeilenumbruch eingefügt wird, wenn die Zeile zu lang sein sollte. Das ist z.B. bei Einheiten sinnvoll, um die Zahl nicht von der Einheit zu trennen: `1&nbsp;cm` wird als 1&nbsp;cm angezeigt.
+
+Der verfügbare Platz für das Seitenmenü ist relativ schmal, daher kann es passieren, dass zu lange Worte (ab ca. 15 Zeichen) über den Rand hinausragen oder der Browser an irgendeiner Stelle einfach ein Bindestrich einfügt. Mit dem HTML-Sonderzeichen `&shy;` kann man selbst einen optionalen Bindestrich an einer sinnvollen Stelle im Wort einsetzen, damit wenn nötig das Wort an dieser Stelle umgebrochen wird.
+
+- Ohne optionale Bindestriche: Rindfleischetikettierungsüberwachungsaufgabenübertragungsgesetz
+- Mit optionalen Bindestrichen: Rindfleischetikettierungs&shy;überwachungsaufgaben&shy;übertragungsgesetz
+
 ### Neuen Eintrag im Seitenmenü ergänzen
 
 ### Eintrag im Seitenmenü bearbeiten
@@ -285,5 +296,8 @@ faculties:
 ### Markdown
 
 ### HTML
+
+**Weitere Informationen:**
+- [HTML-Sonderzeichen](#html-sonderzeichen)
 
 ### Jekyll Templates
