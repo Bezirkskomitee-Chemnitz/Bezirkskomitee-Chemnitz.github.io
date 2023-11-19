@@ -1,12 +1,12 @@
 # How-To <!-- omit in toc -->
 <!-- regex word counter: [^#][a-z-_äüöß]{2,}[ :;,.] -->
 
-**Inhaltsverzeichnis:**
+<span id="inhaltsverzeichnis">**Inhaltsverzeichnis:**</span>
 
 - [Datei- und Ordnerstruktur verstehen](#datei--und-ordnerstruktur-verstehen)
 - [Seiten](#seiten)
   - [Neue Seite erstellen](#neue-seite-erstellen)
-  - [Seiten Header](#seiten-header)
+  - [Seiten-Header](#seiten-header)
   - [Seite bearbeiten](#seite-bearbeiten)
 - [Seitenmenü](#seitenmenü)
   - [Konfiguration der Einträge](#konfiguration-der-einträge)
@@ -76,19 +76,19 @@ Im folgenden gibt es kleine Erklärung zu einigen Ordnern und Dateien, die Sie b
 
 Alle Seiten der Webseite liegen im Ordner `/pages`. Für die Übersichtlichkeit sind die Seiten noch in Unterordnern nach Fachrichtung sortiert.
 
-**Regeln für die Benennung:**<br>
+<span id="seiten--regeln-fuer-die-bennenung">**Regeln für die Benennung:**</span><br>
 Der Titel einer Seite und die finale URL bzw. der Dateiname der Seite sind *nicht von einander abhängig* und können verschieden sein; aber der Dateiname inkl. Dateipfad bestimmen zu teilen die URL.
 <br>
 Der Dateiname darf keine Leerzeichen oder Sonderzeichen enthalten und sollte möglichst kurz gehalten werden. Im Prinzip sind also nur kleine (ANSI) Buchstaben und Unterstrich (`_`) und Bindestrich (`-`) erlaubt. Der Dateiname muss auf `.md` enden, da es eine [Markdown](#markdown) Datei ist. Der Titel sollte aussagekräftig und nicht zu lang sein. Es gibt keine Feste Längenbegrenzung, aber mehr als 100 Zeichen sollten es nicht sein.
 
-**Verwendete Formate:**<br>
+<span id="seiten--verwendete-formate">**Verwendete Formate:**</span><br>
 Der meiste Inhalt kann mit sogenanntem [Markdown](#markdown) formatiert werden. Für manche Strukturen existieren eigene [Jekyll-Templates](#jekyll-templates) die verwendet werden können. Sie können aber auch standard [HTML](#html) nutzen. Mehr dazu am Ende des Kapitels [Seite bearbeiten](#seite-bearbeiten).
 
 ### Neue Seite erstellen
 
 Wenn Sie eine neue Seite erstellen möchten, dann müssen Sie im entsprechenden Unterordner der Fachrichtung eine neue Datei erstellen. Und folgendes beachten, hier an einem Beispiel veranschaulicht:
 
-**Beispiel:**
+<span id="neue-seite-erstellen--beispiel">**Beispiel:**</span>
 
 ```
 bezirkskomitee-chemnitz.github.io
@@ -104,11 +104,11 @@ Der Titel, der später automatisch als Überschrift auf der Seite angezeigt wird
 
 Entsprechend der Fachrichtung liegt die Datei im Ordner `/pages/mathematik`. Der Titel enthält in diesem Beispiel Sonderzeichen und Leerzeichen; der Dateiname darf aber im Prinzip nur aus kleinen (ANSI) Buchstaben und Unterstrich (`_`) und Bindestrich (`-`) bestehen. Also nennen wir die Datei bspw. `foerderung_mint.md`.
 
-### Seiten Header
+### Seiten-Header
 
 Im Header einer jeden Seite werden Seitenspezifische Eigenschaften konfiguriert. Mindestens der Titel (`title`), die URL (`permalink`) und das letzte Änderungsdatum (`date`) sollten dort gesetzt werden. Der Header wird am Anfang und Ende mit drei Bindestrichen (`---`) abgegrenzt und muss ganz am Anfang der Datei stehen. Der Header benutzt das [YAML](#yaml) Format.
 
-**Beispiel:**
+<span id="seiten-header--beispiel">**Beispiel:**</spand>
 
 ```yml
 ---
@@ -118,7 +118,7 @@ date: 2023-11-18
 ---
 ```
 
-**Basis Attribute:**
+<span id="seiten-header--basis-attribute">**Basis Attribute:**</span>
 
 `title`:
 - Darf im Prinzip alle Zeichen enthalten; aber Doppelpunkt (`:`), einfaches (`'`) und doppeltes (`"`) Hochkommata sollten vermieden werden.
@@ -135,7 +135,7 @@ date: 2023-11-18
 - Format: `JJJJ-MM-TT`; Bspw.: `2023-11-18` steht für den `18. November 2023`
 - **Achtung:** Wenn hier ein nicht mögliches Datum steht, gibt es einen Fehler und die gesamte Webseite kann nicht korrekt generiert werden! Bspw. weil Monat und Tag ausversehen vertauscht wurde.  
 
-**Weitere Attribute:**
+<span id="seiten-header--weitere-attribute">**Weitere Attribute:**</span>
 
 `keywords`:
 - Suchmaschinen wie Google oder Bing beziehen unter Anderem die von Webseiten festgelegten Stichworte (`keywords`) ein, um deren Relevanz zu beurteilen und die Seite schlussendlich in den Suchergebnissen anzuzeigen oder eben nicht. Daher können Sie hier einige kurze Stichworte auflisten, die grob den Inhalt dieser Seite beschreiben.
@@ -173,7 +173,7 @@ Einfache [HTML](#html) Elemente können ebenfalls verwendet werden. Damit könne
 
 Einige Strukturen können nicht mit einfachem [Markdown](#markdown) umgesetzt werden oder existieren gar nicht erst. Dann können Sie [HTML](#html) verwenden oder es gibt bereits ein [Jekyll-Template](#jekyll-templates), welches die Verwendung für Sie vereinfacht (und die wartbarkeit und erweiterbarkeit für mich vereinfacht).
 
-Bspw. können Sie folgendes Jekyll-Template für geschützte E-Mails verwenden:
+<span id="seite-bearbeiten--geschuetzte-emails">Bspw. können Sie folgendes Jekyll-Template für geschützte E-Mails verwenden:</span>
 
 ```liquid
 {% include email.html email="email@example.de" %}
@@ -213,6 +213,8 @@ faculties:
       url: ""
 ```
 
+<span id="seitemenue--kurzeinfuehrung-zum-yaml-format">**Kurzeinführung zum [YAML](#yaml) Format:**</span>
+
 Mehr zum sehr oft verwendeten [YAML](#yaml) Format gibt es weiter unten zu lesen, aber vereinfacht gesagt, handelt es sich meistens um geordnete verschachtelte Stichpunkte. So befindet sich unter dem Stichpunkt `math` eine Liste von Stichpunkten, die Titel (`title`) und URL (`url`) der einzelnen Einträge im Seitenmenü enthalten.
 
 Die Tiefe der Einrückung (mit je zwei Leerzeichen) ist hier sehr wichtig, weil nur dadurch die Zugehörigkeit in der Verschachtelung festgelegt wird. Ein neuer Eintrag wird mit einem Bindestrich (`-`) markiert und die Attribute eines Eintrages folgen ohne Bindestrich mit gleicher Einrückung. Leerzeilen sind optional und dienen nur der Lesbarkeit.
@@ -230,7 +232,7 @@ Bei den Fachrichtung `Chemie` und `Biologie` gibt es (noch) kein Seitenmenü, da
 
 Es wird zwischen zwei verschiedenen Einträgen im Seitenmenü unterschieden, die beide aus einem Titel (`title`) und einer URL (`url`) oder einer externen URL (`external_url`) bestehen. Ein Eintrag kann auch eine Kategorie sein, die weitere Einträge (`items`) als Unterpunkte hat. Eine solche Kategorie kann auch eine eigene Seite (`url`) haben.
 
-**Beispiel:** ein Eintrag mit URL und einer mit externer URL
+<span id="konfiguration-der-eintraege--beispiel-1">**Beispiel:**</span> ein Eintrag mit URL und einer mit externer URL
 
 ```yml
 faculties:
@@ -241,7 +243,7 @@ faculties:
       external_url: https://www.mathe-wettbewerbe.de/bundeswettbewerb-mathematik/
 ```
 
-**Beispiel:** eine Kategorie mit Einträgen
+<span id="konfiguration-der-eintraege--beispiel-2">**Beispiel:**</span> eine Kategorie mit Einträgen
 
 ```yml
 # Übrigens: so schreibt man Kommentare
@@ -256,7 +258,7 @@ faculties:
           external_url: https://www.mathe-kaenguru.de/
 ```
 
-<span id="html-sonderzeichen">**HTML-Sonderzeichen:**</span>
+<span id="konfiguration-der-eintraege--html-sonderzeichen">**HTML-Sonderzeichen:**</span>
 
 Wie Ihnen vlt. aufgefallen ist, steht beim Eintrag `Mathematikolympiade` so ein komisches `&shy;` zwischen den beiden Wortteilen. Diese Zeichenkombination ist ein sogenanntes [HTML-Sonderzeichen](#html-sonderzeichen). Damit können normalen Umlaute wie z.B. <code>&szlig;</code> mit `&szlig;` für HTML-Webseiten kodiert werden. Diese Kodierung ist hier nicht notwendig; aber es gibt andere praktische Sonderzeichen wie z.B. ein geschütztes Leerzeichen `&nbsp;` oder ein optionaler Bindestrich `&shy;`.
 
@@ -268,6 +270,8 @@ Der verfügbare Platz für das Seitenmenü ist relativ schmal, daher kann es pas
 - Ein sehr langes Wort mit optionalen Bindestrichen: Rindfleischetikettierungs&shy;überwachungsaufgaben&shy;übertragungsgesetz
 
 ### Neuen Eintrag im Seitenmenü ergänzen
+
+Nachdem Sie eine neue Seite erstellt haben, sollte diese nicht nur über eine Verlinkung auf einer anderen Seite erreichbar sein, sondern auch im Seitenmenü aufgelistet werden. Der im [Seiten-Header](#seiten-header) definierte `permalink` entscheidet darüber, unter welchem Seitenmenüeintrag Ihre Seite gelistet werden sollte; also bei welcher Fachrichtung.
 
 ### Eintrag im Seitenmenü bearbeiten
 
@@ -293,11 +297,15 @@ Der verfügbare Platz für das Seitenmenü ist relativ schmal, daher kann es pas
 
 ### YAML
 
+- [Kürzeinführung zum YAML Format](#seitemenue--kurzeinfuehrung-zum-yaml-format) im Zusammenhang mit dem Seitenmenü
+- [Kommentare](#konfiguration-der-eintraege--beispiel-2) im Beispiel
+
 ### Markdown
 
 ### HTML
 
-**Weitere Informationen:**
-- [HTML-Sonderzeichen](#html-sonderzeichen)
+- [HTML-Sonderzeichen](#konfiguration-der-eintraege--html-sonderzeichen)
 
 ### Jekyll Templates
+
+- [Geschützte E-Mails](#seite-bearbeiten--geschuetzte-emails)
