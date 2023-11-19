@@ -157,9 +157,10 @@ date: 2023-11-18
 - Dieses Attribut kann einen einzelnen Wert enthalten (wie bei `permalink`), oder eine Liste von Werten. Bsp.:
 
 ```yml
+permalink: mathematik/olympiade
 redirect_from:
-  - /mathematik/foerderung_alternativ_link_1/
-  - /mathematik/foerderung_alternativ_link_2/
+  - mathematik/mathematikolympiade/
+  - mathematik/anderer_alternativer_link/
 ```
 
 ### Seite bearbeiten
