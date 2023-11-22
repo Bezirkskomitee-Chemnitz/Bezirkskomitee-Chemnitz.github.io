@@ -164,6 +164,8 @@ hr {
 #site-title {
   margin-top: 0;
   color: var(--title-color);
+  font-size: 2.5em;
+  font-weight: bold;
 }
 
 h1,

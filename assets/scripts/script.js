@@ -65,7 +65,6 @@ function get_debug() {
 $(document).ready(function () {
   // update theme from cookie
   set_theme(get_theme());
-  set_debug(get_cookie("debug"));
 
   // add 'no_icon' class to links including images
   function parent_no_icon(element) { $(element).parent().addClass("no_icon"); }
@@ -82,9 +81,7 @@ $(document).ready(function () {
 
   // functionality for debug switch button
   $(".debug-switch").on("click touch", (evt) => {
-    var new_debug_state = !get_debug();
-    set_cookie("debug", new_debug_state, 1, "y");
-    set_debug(new_debug_state);
+    set_debug(!get_debug());
   });
 
   // functionality for theme selector button

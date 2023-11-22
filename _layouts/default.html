@@ -3,7 +3,7 @@ layout: compress
 ---
 
 <html lang="{{ page.language | default: site.language | default: 'de' }}"
-  data-theme="{% if site.dark_mode %}dark{% else %}light{% endif %}" {% if jekyll.environment != 'production' %}data-debug="true" {% endif %}>
+  data-theme="{% if site.dark_mode %}dark{% else %}light{% endif %}" {% if jekyll.environment != 'production' %}data-debug="false" {% endif %}>
 
 {% include head.liquid %}
 
