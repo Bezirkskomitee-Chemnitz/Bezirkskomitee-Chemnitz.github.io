@@ -1,3 +1,11 @@
+---
+title: How-To
+permalink: how-to
+date: 2023-11-22
+printed_title: false
+author: Fabian Bartl
+---
+
 # How-To <!-- omit in toc -->
 <!-- regex word counter: [^#][a-z-_äüöß]{2,}[ :;,.] -->
 
@@ -13,9 +21,6 @@
   - [Neuen Eintrag im Seitenmenü ergänzen](#neuen-eintrag-im-seitenmenü-ergänzen)
   - [Eintrag im Seitenmenü bearbeiten](#eintrag-im-seitenmenü-bearbeiten)
 - [Posts](#posts)
-  - [Neuen Post erstellen](#neuen-post-erstellen)
-  - [Konfiguration der Posts](#konfiguration-der-posts)
-  - [Post bearbeiten](#post-bearbeiten)
 - [Dokumentation für verwendete Formate](#dokumentation-für-verwendete-formate)
   - [Bildformate](#bildformate)
   - [YAML](#yaml)
@@ -64,7 +69,7 @@ Im folgenden gibt es kleine Erklärung zu einigen Ordnern und Dateien, die Sie b
 | `/pages/mathematik` | | Dieser Ordner enthält alle Seiten der Fachrichtung Mathematik. | [Markdown](#markdown), [HTML](#html), [Jekyll-Templates](#jekyll-templates) |
 | `/pages/mathematik` | `/adam-ries.md` | Diese Datei ist bspw. die Seite des Adam-Ries Wettbewerbs: [https://bezirkskomitee-chemnitz.github.io/mathematik/adam-ries/](https://bezirkskomitee-chemnitz.github.io/mathematik/adam-ries/). Wie die URL und der angezeigte Titel etc. zustande kommt, wird im sogenannten [Header](#seiten-header) am Anfang einer jeden Datei festgelegt. | [Markdown](#markdown), [HTML](#html), [Jekyll-Templates](#jekyll-templates) |
 | `/pages/mathematik`, `/pages/physik` | `/index.md` | Die `index.md` Datei in einem beliebigen Ordner ist immer die Startseite der jeweiligen Fachrichtung. | [Markdown](#markdown), [HTML](#html), [Jekyll-Templates](#jekyll-templates) |
-| `/` | `/index.md` | Das ist die Startseite der Webseite. Sie können diese Datei bearbeiten, sollten aber irgendwo die Posts mit `{% include posts.liquid %}` einbinden. | [Markdown](#markdown), [HTML](#html), [Jekyll-Templates](#jekyll-templates) |
+| `/` | `/index.md` | Das ist die Startseite der Webseite. Sie können diese Datei bearbeiten, sollten aber irgendwo die Posts mit <code>{&percnt; include posts.liquid &percnt;}</code> einbinden. | [Markdown](#markdown), [HTML](#html), [Jekyll-Templates](#jekyll-templates) |
 | `/` | `/_config.yml` | In dieser Datei wird einiges der Webseite konfiguriert. Hier ist auch das obere Menü mit den Fachrichtungen definiert. Sie sollten hier nichts verändern, außer evtl. die Menüeinträge in `topnav`. | [YAML](#yaml), [Jekyll-Templates](#jekyll-templates) |
 | `/_site` | | Dieser Ordner enthält die generierte statische Webseite mit allen notwendigen Dateien für den Webserver. Änderungen in diesem Ordner werden beim nächsten sogenannten *build* einfach überschrieben. | |
 
@@ -153,6 +158,10 @@ date: 2023-11-18
 - Hier könnten die Namen der (Haupt-)Authoren einer Seite gelistet werden.
 - Bisher werden die Authoren nicht im Design beachtet und daher nicht auf der Seite angezeigt. Für Suchmaschinen sind die Authoren dennoch sichtbar.
 
+<!-- `printed_title`:
+- Hier kann ein alternativer Titel angegeben werden, der statt dem `title` Wert am Anfang der Seite angezeigt wird. Im Titel des Browsertabs steht unabhängig davon aber immer der Wert von `title`.
+- Wenn hier `false` als Wert eingetragen wird, dann wird kein Titel angezeigt. -->
+
 `redirect_from`:
 - Hier können Sie alternative URLs ergänzen, die den Nutzer zu dieser Seite weiterleiten. Wenn Sie bspw. den `permalink` der Seite ändern, kann der vorherige Eintrag hier ergänzt werden, damit bestehende ältere Links weiterhin funktionieren.
 - Dieses Attribut kann einen einzelnen Wert enthalten (wie bei `permalink`), oder eine Liste von Werten. Bsp.:
@@ -176,9 +185,8 @@ Einige Strukturen können nicht mit einfachem [Markdown](#markdown) umgesetzt we
 
 <span id="seite-bearbeiten--geschuetzte-emails">Bspw. können Sie folgendes Jekyll-Template für geschützte E-Mails verwenden:</span>
 
-```liquid
-{% include email.html email="email@example.de" %}
-```
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{&percnt; include email.html email="email@example.de" &percnt;}
+</code></pre></div></div>
 
 ## Seitenmenü
 
@@ -314,11 +322,13 @@ Einen Eintrag im Seitenmenü zu bearbeiten, heißt z.B. den angezeigten Titel (`
 
 ## Posts
 
-### Neuen Post erstellen
+*Die Dokumentation zum Thema Posts kommt erst in ein paar Wochen.*
 
-### Konfiguration der Posts
+<!-- ### Neuen Post erstellen -->
 
-### Post bearbeiten
+<!-- ### Konfiguration der Posts -->
+
+<!-- ### Post bearbeiten -->
 
 
 ## Dokumentation für verwendete Formate
@@ -339,9 +349,17 @@ Einen Eintrag im Seitenmenü zu bearbeiten, heißt z.B. den angezeigten Titel (`
 
 ### Markdown
 
+**Externe Links:**
+- [Grundlegende Syntax](https://www.markdownguide.org/basic-syntax/)
+- [Tabellen](https://www.markdownguide.org/extended-syntax/#tables)
+- [Workarounds](https://www.markdownguide.org/hacks/)
+
 ### HTML
 
 - [HTML-Sonderzeichen](#konfiguration-der-eintraege--html-sonderzeichen)
+
+**Externe Links:**
+- [HTML Zeichenrefernz](https://wiki.selfhtml.org/wiki/Zeichenreferenz)
 
 ### Jekyll Templates
 
