@@ -6,7 +6,7 @@ date: 2022-10-26
 ---
 
 # Fördermöglichkeiten
-- an der TU Chemnitz [weitere Informationen](tuc_foerderung.md)
+- an der TU Chemnitz [weitere Informationen](tuc_foerderung)
 - im Korrespondenzzirkel Mathematik (KZM)
   
 [Onlineanmeldung für den KZM](https://www.sachsen.schule/~bezirkskomitee/Onlineanmeldung.htm)

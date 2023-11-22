@@ -38,7 +38,7 @@ function get_cookie(name) {
 
 // theme functions
 function to_theme(theme) {
-  return theme === "dark" ? "dark" : "light";
+  return (theme === "dark") ? "dark" : "light";
 }
 
 function set_theme(theme) {

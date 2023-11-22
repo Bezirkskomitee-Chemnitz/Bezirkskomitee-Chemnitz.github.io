@@ -28,3 +28,8 @@ faculties:
 
     - title: Inhaltlich Verantwortlicher
       url: verantwortung/
+  
+
+  physics:
+    - title: Home
+      url: ""

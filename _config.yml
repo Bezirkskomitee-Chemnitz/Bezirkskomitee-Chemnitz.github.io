@@ -1,4 +1,5 @@
-# bundle exec jekyll serve
+# command for local build:
+#   bundle exec jekyll serve -I -t --safe
 
 title: Bezirkskomitee Chemnitz
 email:
@@ -13,9 +14,13 @@ url: "https://bezirkskomitee-chemnitz.github.io" # the base hostname & protocol 
 repository: "https://github.com/Bezirkskomitee-Chemnitz/Bezirkskomitee-Chemnitz.github.io" # the github repository
 
 # build settings
-theme: minima # modified
+# theme: "minima"       # this website doesn't use any theme -> usage also removed in Gemfile
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+whitelist:
+  - jekyll-redirect-from
 
 # social badges
 github_username:
@@ -24,20 +29,6 @@ rss:
 
 # analytics
 google_analytics:
-
-# main navigation
-topnav:
-  - name: Mathematik
-    url: mathematik/
-    faculty: math # name independent faculty identifier to 'connect' topnav with page defaults
-  - name: Physik
-    url: physik/
-    faculty: physics
-
-  - name: Chemie # this faculty is not hosted on this webpage, so define an external_url
-    external_url: https://www.tu-chemnitz.de/chemie/stoeck/
-  - name: Biologie
-    external_url: https://www.ipn.uni-kiel.de/aktuell/ibo/ibo_web1.htm
 
 # custom settings
 dark_mode: true
@@ -58,6 +49,20 @@ compress_html:
   profile: false
   startings: []
 
+# main navigation
+topnav:
+  - name: Mathematik
+    url: mathematik/
+    faculty: math # name independent faculty identifier to 'connect' topnav with page defaults
+  - name: Physik
+    url: physik/
+    faculty: physics
+
+  - name: Chemie # this faculty is not hosted on this webpage, so define an external_url
+    external_url: https://www.tu-chemnitz.de/chemie/stoeck/
+  - name: Biologie
+    external_url: https://www.ipn.uni-kiel.de/aktuell/ibo/ibo_web1.htm
+
 # page defaults
 defaults:
   - scope:
@@ -75,3 +80,15 @@ defaults:
     values:
       layout: default
       faculty: physics
+  
+  # just for completeness, even if these directories are not hosted on this page
+  - scope:
+      path: pages/chemie/*
+    values:
+      layout: default
+      faculty: chemistry
+  - scope:
+      path: pages/biologie/*
+    values:
+      layout: default
+      faculty: biology

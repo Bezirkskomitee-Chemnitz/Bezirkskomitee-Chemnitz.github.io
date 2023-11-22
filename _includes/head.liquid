@@ -1,11 +1,14 @@
 <head>
+  {% assign faculty = site.topnav | where: 'faculty', page.faculty %}
+  {% for e in faculty %}{% assign faculty_name = e.name %}{% endfor %}
+  
   <meta charset="utf-8">
-  <meta name="keywords" content="{{ page.keywords | default: site.keywords }}">
+  <meta name="keywords" content="{{ site.keywords }}, {{ faculty_name | downcase }}, {{ page.keywords }}">
   <meta name="author" content="{{ page.author }}">
   <meta name="robots" content="all">
   <meta name="referrer" content="origin">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=10,user-scalable=yes">
-
+  
   <link rel="stylesheet" type="text/css" href="{{ 'assets/styles/main.css' | relative_url }}">
   <link rel="stylesheet" type="text/css" href="{{ 'assets/styles/custom.css' | relative_url }}">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
