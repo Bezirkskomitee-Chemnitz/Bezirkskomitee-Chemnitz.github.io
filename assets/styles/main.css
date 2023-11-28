@@ -295,6 +295,7 @@ ul.row {
 }
 
 /* font awesome icons for specific link types */
+/* https://fontawesome.com/v4/icons/ */
 aside:after,
 abbr[title]:after,
 a:not(.no_icon):after,
@@ -360,6 +361,11 @@ a:not(.no_icon)[href$=".tar.gz"]:after,
 a:not(.no_icon)[href$=".tar"]:after,
 a:not(.no_icon)[href$=".zip"]:after {
   content: "\f1c6";
+}
+
+/* map-marker */
+a:not(.no_icon)[href^="https://www.google.com/maps"]:after {
+  content: "\f041";
 }
 
 /* info */

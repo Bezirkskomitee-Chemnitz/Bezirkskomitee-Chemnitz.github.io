@@ -6,12 +6,15 @@
   <nav class="row">
     {% for faculty in site.topnav %}
     <div>
-      {% assign url = faculty.url | relative_url %}
-      {% if url contains page.permalink and page.permalink != '/' %}
-      {% assign class = 'active' %}
-      {% else %}{% assign class = nil %}{% endif %}
-
-      {% include smart_link.html content=faculty.name url=faculty.url external_url=faculty.external_url class=class %}
+      {% assign faculty_url = faculty.url | relative_url %}
+      
+      {% if faculty_url contains page.permalink and page.permalink != '/' %}
+        {% assign smart_link_class = 'active' %}
+      {% else %}
+        {% assign smart_link_class = nil %}
+      {% endif %}
+      
+      {% include smart_link.html content=faculty.name url=faculty.url external_url=faculty.external_url class=smart_link_class icon=faculty.icon %}
     </div>
     {% endfor %}
   </nav>

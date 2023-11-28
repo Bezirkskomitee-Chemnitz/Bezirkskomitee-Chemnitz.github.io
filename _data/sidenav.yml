@@ -5,6 +5,8 @@ faculties:
 
     - title: Korrespondenzzirkel
       url: kzm/
+    - title: Mathematikseminar
+      url: mathematikseminar/
 
     - title: Wettbewerbe
       items:
@@ -22,10 +24,8 @@ faculties:
 
     - title: Trainingsmaterial
       url: material/
-
     - title: Ranglisten
       url: rankings/
-
     - title: Inhaltlich Verantwortlicher
       url: verantwortung/
   

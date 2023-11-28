@@ -1,0 +1,34 @@
+---
+title: search
+layout: compress
+search: exclude
+permalink: /search.json
+---
+
+[
+	{% for page in site.pages %}
+		{% unless page.search == "exclude" %}
+			{
+				{% if page.title %}
+					{% assign title = page.title | strip | escape | remove: '\' %}
+				{% else %}
+					{% assign title = page.keywords | split: ',' | first %}
+				{% endif %}
+
+				{% assign url = page.url | remove: '/' %}
+				{% assign path = page.url | remove: '.md' | remove: '.html' | replace: '/', '.' | split: '.' | join: ' > ' | replace_first: ' > ' %}
+				{% assign date = page.last_updated | date_to_xmlschema | date: site.date_format %}
+				{% assign keywords = page.keywords %}
+				{% assign description = page.description | strip | escape | truncate: 200 %}
+
+				"title"			: "{{ title }}",
+				"url"			: "{{ url }}",
+				"path"			: "{{ path }}",
+				"date"			: "{{ date | default: ' ' }}",
+				"keywords"		: "{{ keywords }}",
+				"description"	: "{{ description }}"
+			}
+			{% unless forloop.last %},{% endunless %}
+		{% endunless %}
+	{% endfor %}
+]

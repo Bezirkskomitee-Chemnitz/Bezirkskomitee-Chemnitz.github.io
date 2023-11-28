@@ -1,0 +1,1 @@
+{% unless include.url %}{% assign gmaps_url = "https://www.google.com/maps?q=" | append: include.content | replace: " ", "%20" %}{% endunless %}<a class="maps-link" target="_blank" href="{{ include.url | default: gmaps_url }}">{{ include.content }}</a>

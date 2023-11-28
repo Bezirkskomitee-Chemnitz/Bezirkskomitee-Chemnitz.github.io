@@ -21,6 +21,7 @@ author: Fabian Bartl
   - [Neuen Eintrag im Seitenmenü ergänzen](#neuen-eintrag-im-seitenmenü-ergänzen)
   - [Eintrag im Seitenmenü bearbeiten](#eintrag-im-seitenmenü-bearbeiten)
 - [Posts](#posts)
+- [Jekyll Includes](#jekyll-includes)
 - [Dokumentation für verwendete Formate](#dokumentation-für-verwendete-formate)
   - [Bildformate](#bildformate)
   - [YAML](#yaml)
@@ -146,15 +147,21 @@ date: 2023-11-18
 
 `keywords`:
 - Suchmaschinen wie Google oder Bing beziehen unter Anderem die von Webseiten festgelegten Stichworte (`keywords`) ein, um deren Relevanz zu beurteilen und die Seite schlussendlich in den Suchergebnissen anzuzeigen oder eben nicht. Daher können Sie hier einige kurze Stichworte auflisten, die grob den Inhalt dieser Seite beschreiben.
+- Dieses Attribut dient auch der auf dieser Seite verwendeten Suchfunktion.
 - Groß- und Kleinschreibung ist nicht relevant, Sonderzeichen können verwendet werden und einzelne Stichworte müssen mit einem Komma (`,`) voneinander getrennt werden. 
 - Bsp.: `förderung, mint`
 - Jede Seite der Webseite hat immer folgende Stichworte: `bezirkskomitee, chemnitz, wettbewerbe` und den Fachbereich (z.B. `mathematik`)
 
 `description`:
 - Für Suchmaschinen ist auch eine kurze Beschreibung der Seite wichtig, die dann als Kurzvorschau in den Suchergebnissen angezeigt wird. 
+- Dieses Attribut dient auch der auf dieser Seite verwendeten Suchfunktion.
 - Bsp.: `"Das Mathematikseminar ist ein Angebot für die Schülerinnen und Schüler der Klassenstufen 7 und 8 aus dem Regierungsbezirk Chemnitz, welche sich für die 3. Stufe der Mathematikolympiade qualifiziert haben."`
 - Die Beschreibung sollte nicht länger als 300 Zeichen lang sein. In den Suchergebnissen werden davon möglicherweise nur 120 Zeichen angezeigt.
 - Diese im Header definierte Beschreibung wird immer automatisch als Beschreibung unter dem Titel auf jeder Seite angezeigt. 
+
+`search: exclude`:
+- Das Attribut `search` gibt es nur im Zusammenhang mit dem Wert `exclude`.
+- Hiermit kann eine Seite aus der Suchfunktion dieser Webseite ausgeschlossen werden, sodass sie nicht in den Suchergebnissen auftaucht.
 
 `language`:
 - Dieses Attribut dient (aktuell noch) nur einer Suchmaschine als Hinweis, in welcher Sprache der Inhalt der Seite geschrieben ist.
@@ -336,6 +343,11 @@ Einen Eintrag im Seitenmenü zu bearbeiten, heißt z.B. den angezeigten Titel (`
 <!-- ### Konfiguration der Posts -->
 
 <!-- ### Post bearbeiten -->
+
+
+## Jekyll Includes
+
+*Die Dokumentation zum Thema Jekyll Includes kommt erst in ein paar Wochen.*
 
 
 ## Dokumentation für verwendete Formate

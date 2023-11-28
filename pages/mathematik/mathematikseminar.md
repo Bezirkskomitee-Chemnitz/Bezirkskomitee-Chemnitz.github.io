@@ -12,7 +12,7 @@ Das Seminar findet an zwei Samstagen, jeweils von 10:00 - 14:00 Uhr statt. Die T
 - Seminartag 1:  Samstag, 20. Januar 2024
 - Seminartag 2:  Samstag, 03. Februar 2024
 
-Ort der Seminare: Johannes-Kepler-Gymasium Chemnitz, Humboldtplatz 1, 09130 Chemnitz
+Ort der Seminare: {% include maps.html content="Johannes-Kepler-Gymasium Chemnitz, Humboldtplatz 1, 09130 Chemnitz" %}
 
 
 An beiden Seminartagen finden jeweils zwei Kurse zur Vorbereitung auf die 3. Stufe der Mathematikolympiade statt.

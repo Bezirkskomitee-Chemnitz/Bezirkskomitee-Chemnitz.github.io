@@ -63,9 +63,9 @@ topnav:
   - name: Biologie
     external_url: https://www.ipn.uni-kiel.de/aktuell/ibo/ibo_web1.htm
   
-  - name: Suchen
-    icon: fa-search
-    url: suchen/
+  - name: suchen
+    icon: search
+    url: suche/
 
 # page defaults
 defaults:
