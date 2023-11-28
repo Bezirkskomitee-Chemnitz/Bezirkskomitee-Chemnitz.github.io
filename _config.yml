@@ -53,15 +53,19 @@ compress_html:
 topnav:
   - name: Mathematik
     url: mathematik/
-    faculty: math # name independent faculty identifier to 'connect' topnav with page defaults
+    faculty: math  # name independent faculty identifier to 'connect' topnav with page defaults
   - name: Physik
     url: physik/
     faculty: physics
 
-  - name: Chemie # this faculty is not hosted on this webpage, so define an external_url
+  - name: Chemie  # this faculty is not hosted on this webpage, so define an external_url
     external_url: https://www.tu-chemnitz.de/chemie/stoeck/
   - name: Biologie
     external_url: https://www.ipn.uni-kiel.de/aktuell/ibo/ibo_web1.htm
+  
+  - name: Suchen
+    icon: fa-search
+    url: suchen/
 
 # page defaults
 defaults:
@@ -71,10 +75,10 @@ defaults:
       layout: default
 
   - scope:
-      path: pages/mathematik/* # location of all 'mathematik' related pages
+      path: pages/mathematik/*  # location of all 'mathematik' related pages
     values:
       layout: default
-      faculty: math # name independent faculty identifier to 'connect' topnav with page defaults
+      faculty: math  # name independent faculty identifier to 'connect' topnav with page defaults
   - scope:
       path: pages/physik/*
     values:

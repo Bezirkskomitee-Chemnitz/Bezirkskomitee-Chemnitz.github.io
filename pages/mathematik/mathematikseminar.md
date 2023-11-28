@@ -2,10 +2,8 @@
 title: Mathematikseminar Klassenstufe 7 und 8
 permalink: mathematik/mathematikseminar/
 date: 2023-09-21
+description: Das Mathematikseminar ist ein Angebot für die Schülerinnen und Schüler der Klassenstufen 7 und 8 aus dem Regierungsbezirk Chemnitz, welche sich für die 3. Stufe der Mathematikolympiade qualifiziert haben. Die persönliche Einladung erfolgt parallel zur Einladung für die 3. Stufe.
 ---
-
-**Das Mathematikseminar ist ein Angebot für die Schülerinnen und Schüler der Klassenstufen 7 und 8 aus dem Regierungsbezirk Chemnitz, welche sich für die 3. Stufe der Mathematikolympiade qualifiziert haben.
-Die persönliche Einladung erfolgt parallel zur Einladung für die 3. Stufe.**
 
 # Termine & Ablauf
 

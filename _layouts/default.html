@@ -3,7 +3,7 @@ layout: compress
 ---
 
 <html lang="{{ page.language | default: site.language | default: 'de' }}"
-  data-theme="{% if site.dark_mode %}dark{% else %}light{% endif %}" {% if jekyll.environment != 'production' %}data-debug="false" {% endif %}>
+  data-theme="{% if site.dark_mode %}dark{% else %}light{% endif %}" {% if jekyll.environment != 'production' %}data-debug="true" {% endif %}>
 
 {% include head.liquid %}
 
@@ -18,10 +18,16 @@ layout: compress
       {% assign is_index_page = false %}
       {% if baseurl contains page.permalink %}{% assign is_index_page = true %}{% endif %}
 
-      {% if page.printed_title != false and is_index_page == false %}
-        <h{{ site.kramdown.header_offset }}>
+      {% if page.printed_title != false %} {% comment %} and is_index_page == false {% endcomment %}
+        <h{{ site.kramdown.header_offset }} id="page-title">
           {{ page.printed_title | default: page.title }}
         </h{{ site.kramdown.header_offset }}>
+      {% endif %}
+      
+      {% if page.description %}
+        <div id="page-description">
+          {{ page.description }}
+        </div>
       {% endif %}
 
       {{ content }}

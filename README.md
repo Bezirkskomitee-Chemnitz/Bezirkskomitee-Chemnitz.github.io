@@ -130,6 +130,7 @@ date: 2023-11-18
 - Darf im Prinzip alle Zeichen enthalten; aber Doppelpunkt (`:`), einfaches (`'`) und doppeltes (`"`) Hochkommata sollten vermieden werden.
 - Wenn Doppelpunkte (`:`) enthalten sind, muss der Text zwischen einfachen (`'`) oder doppelten Hochkommata (`"`) geschrieben werden.
 - Im obigen Bsp. müssen zum eingrenzen einfache Hochkommata (`'`) verwendet werden, da auch doppelte Hochkommata (`"`) im Titel vorhanden sind.
+- Dieser im Header definierte Titel wird immer automatisch auf jeder Seite als Überschrift angezeigt. 
 
 `permalink`:
 - Bezeichnet die URL und muss im Prinzip den Dateipfad und -namen abbilden.
@@ -148,6 +149,12 @@ date: 2023-11-18
 - Groß- und Kleinschreibung ist nicht relevant, Sonderzeichen können verwendet werden und einzelne Stichworte müssen mit einem Komma (`,`) voneinander getrennt werden. 
 - Bsp.: `förderung, mint`
 - Jede Seite der Webseite hat immer folgende Stichworte: `bezirkskomitee, chemnitz, wettbewerbe` und den Fachbereich (z.B. `mathematik`)
+
+`description`:
+- Für Suchmaschinen ist auch eine kurze Beschreibung der Seite wichtig, die dann als Kurzvorschau in den Suchergebnissen angezeigt wird. 
+- Bsp.: `"Das Mathematikseminar ist ein Angebot für die Schülerinnen und Schüler der Klassenstufen 7 und 8 aus dem Regierungsbezirk Chemnitz, welche sich für die 3. Stufe der Mathematikolympiade qualifiziert haben."`
+- Die Beschreibung sollte nicht länger als 300 Zeichen lang sein. In den Suchergebnissen werden davon möglicherweise nur 120 Zeichen angezeigt.
+- Diese im Header definierte Beschreibung wird immer automatisch als Beschreibung unter dem Titel auf jeder Seite angezeigt. 
 
 `language`:
 - Dieses Attribut dient (aktuell noch) nur einer Suchmaschine als Hinweis, in welcher Sprache der Inhalt der Seite geschrieben ist.
