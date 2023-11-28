@@ -322,6 +322,10 @@ a:not(.no_icon)[download]:after {
 }
 
 /* file-zipper */
+a:not(.no_icon)[href$=".7z"]:after,
+a:not(.no_icon)[href$=".rar"]:after,
+a:not(.no_icon)[href$=".tar.gz"]:after,
+a:not(.no_icon)[href$=".tar"]:after,
 a:not(.no_icon)[href$=".zip"]:after {
   content: "\f1c6";
 }
@@ -369,8 +373,12 @@ abbr[title]:after {
 }
 
 .overlay {
+  padding: 0.5em;
   right: 10px;
   bottom: 10px;
+  background-color: var(--accent-color);
+  border-radius: 50px;
+  border: var(--default-border);
 }
 
 .overlay>a {
@@ -395,11 +403,11 @@ html[data-debug="true"] .debug-switch>i:before {
 
 .theme-selector>i:before,
 html[data-theme="light"] .theme-selector>i:before {
-  content: "\f186";
+  content: "\f186";  /* moon */
 }
 
 html[data-theme="dark"] .theme-selector>i:before {
-  content: "\f185";
+  content: "\f185";  /* sun */
 }
 
 /* style (adjustments) for different screen sizes */
@@ -475,8 +483,8 @@ body {
     transition: var(--animate-all);
     height: 100vh;
     width: var(--aside-width);
-    /* padding: 7em 0.5em; */
     margin: unset;
+    /* padding: 7em 0.5em; */
     padding: 0 0.5em;
     border-right: var(--default-border);
     background-color: var(--accent-color);
@@ -490,16 +498,18 @@ body {
   aside:after {
     position: fixed;
     top: 6.2em;
-    left: calc(var(--aside-width) - 0.5em);
+    left: calc(var(--aside-width) - 0.05em);
     background-color: var(--accent-color);
-    content: "\f0c9";
-    border: 1em solid var(--accent-color);
+    content: "\f0c9";  /* hamburger menu */
+    border: var(--default-border);
+    border-left: none;
+    padding: 1em;
     border-radius: 0 50px 50px 0;
     color: var(--highlight-color);
   }
 
   aside:hover:after {
-    content: "\f00d";
+    content: "\f00d";  /* cross */
     color: var(--focus-color);
   }
 
