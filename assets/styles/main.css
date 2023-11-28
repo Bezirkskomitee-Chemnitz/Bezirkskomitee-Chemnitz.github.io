@@ -343,6 +343,7 @@ abbr[title]:after {
   margin: 1em;
   padding: 1em;
   border-radius: 10px;
+  background-color: var(--accent-color);
 }
 
 .posts>.row:not(:last-child) {
