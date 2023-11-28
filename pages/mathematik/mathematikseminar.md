@@ -17,6 +17,8 @@ Ort der Seminare: Johannes-Kepler-Gymasium Chemnitz, Humboldtplatz 1, 09130 Chem
 
 An beiden Seminartagen finden jeweils zwei Kurse zur Vorbereitung auf die 3. Stufe der Mathematikolympiade statt.
 
-- 10:00-11:30 Uhr: Kurs 1
-- 11:30-12:30 Uhr: Mittagspause (ein Mittagessen und Getränke werden gestellt)
-- 12:30-14:00 Uhr: Kurs 2
+| Zeitslot | Programm |
+|----------|----------|
+| 10:00-11:30 Uhr | Kurs 1 |
+| 11:30-12:30 Uhr | Mittagspause (ein Mittagessen und Getränke werden gestellt) |
+| 12:30-14:00 Uhr | Kurs 2 |

@@ -161,6 +161,30 @@ hr {
   border-top: var(--default-border);
 }
 
+table {
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 0.5em;
+}
+
+table>thead {
+  border-bottom: var(--default-border);
+}
+
+table>thead>tr>th:not(:last-child),
+table>tbody>tr>td:not(:last-child) {
+  border-right: var(--default-border);
+}
+
+table>tbody>tr:nth-child(odd) {
+  background-color: var(--accent-color);
+}
+
+/* elements of page structure */
+
 #site-title {
   margin-top: 0;
   color: var(--title-color);
@@ -175,6 +199,14 @@ h4,
 h5,
 h6 {
   color: var(--heading-color);
+}
+
+#page-title {
+  margin-bottom: 0;
+}
+
+#page-description {
+  font-style: italic;
 }
 
 header {
@@ -228,14 +260,6 @@ aside>ul>li>ul {
 
 aside>ul>li>ul>li {
   margin-top: 0.5em;
-}
-
-#page-title {
-  margin-bottom: 0;
-}
-
-#page-description {
-  font-style: italic;
 }
 
 /* attribute dependent styles */
