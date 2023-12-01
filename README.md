@@ -1,6 +1,6 @@
 ---
 title: How-To
-permalink: how-to
+permalink: /how-to/
 date: 2023-11-22
 printed_title: false
 author: Fabian Bartl

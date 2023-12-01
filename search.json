@@ -6,29 +6,68 @@ permalink: /search.json
 ---
 
 [
-	{% for page in site.pages %}
-		{% unless page.search == "exclude" %}
-			{
-				{% if page.title %}
-					{% assign title = page.title | strip | escape | remove: '\' %}
-				{% else %}
-					{% assign title = page.keywords | split: ',' | first %}
-				{% endif %}
+  {% for page in site.pages %}
+    {% unless page.search == "exclude" or page.url contains '.' %}
+      {
+        {% assign title = page.title | strip | escape | remove: '\' | truncate: 100 %}
+        {% assign url = page.url %}
 
-				{% assign url = page.url | remove: '/' %}
-				{% assign path = page.url | remove: '.md' | remove: '.html' | replace: '/', '.' | split: '.' | join: ' > ' | replace_first: ' > ' %}
-				{% assign date = page.last_updated | date_to_xmlschema | date: site.date_format %}
-				{% assign keywords = page.keywords %}
-				{% assign description = page.description | strip | escape | truncate: 200 %}
 
-				"title"			: "{{ title }}",
-				"url"			: "{{ url }}",
-				"path"			: "{{ path }}",
-				"date"			: "{{ date | default: ' ' }}",
-				"keywords"		: "{{ keywords }}",
-				"description"	: "{{ description }}"
-			}
-			{% unless forloop.last %},{% endunless %}
-		{% endunless %}
-	{% endfor %}
+        {% assign path_parts = '' %}
+        {% comment %} get faculty name for faculty page {% endcomment %}
+        {% if page.faculty %}
+          {% assign entry = site.topnav | where: 'faculty', page.faculty %}
+          {% for e in entry %}{% assign faculty = e.name %}{% endfor %}
+          {% comment %} append found faculty to path {% endcomment %}
+          {% assign path_parts = faculty %}
+        {% endif %}
+
+        {% comment %} remove trailing slashes for further processing {% endcomment %}
+        {% assign path_stripped = page.url | remove_first: '/' %}
+        {% assign last_char_pos = path_stripped | size | minus: 1 %}
+        {% assign last_char = path_stripped | slice: last_char_pos, 1 %}
+        {% if last_char == '/' %}
+          {% assign path_stripped = path_stripped | slice: 0, last_char_pos %}
+        {% endif %}
+
+        {% comment %} get page name in sidenav if listed {% endcomment %}
+        {% assign relative_page_url = path_stripped | split: '/' | last | append: '/' %}
+        {% comment %} try to find entry in parent list {% endcomment %}
+        {% assign entry_found = site.data.sidenav.faculties[page.faculty] | where: 'url', relative_page_url %}
+        {% assign entry_found_size = entry_found | size %}
+        {% comment %} else try to find entry in any sub list {% endcomment %}
+        {% if entry_found_size == 0 %}
+          {% for entry in site.data.sidenav.faculties[page.faculty] %}
+            {% if entry.items %}
+              {% assign entry_found = entry.items | where: 'url', relative_page_url %}
+              {% assign entry_found_size = entry_found | size %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+        {% comment %} if any entry found, append entry name to path {% endcomment %}
+        {% if entry_found_size == 1 %}
+          {% for e in entry_found %}{% assign path_sidenav_title = e.title %}{% endfor %}
+          {% assign path_parts = path_parts | append: ' > ' | append: path_sidenav_title %}
+        {% endif %}
+
+        {% comment %} set empty path for home page {% endcomment %}
+        {% if url == '/' %}
+          {% assign path_parts = '' %}
+        {% endif %}
+        
+        {% assign date = page.date | date_to_xmlschema | date: site.date_format %}
+        {% assign keywords = page.keywords | remove: site.keywords | strip | escape | remove: '\' | truncate: 100 %}
+        {% assign description = page.description | strip | escape | remove: '\' | truncate: 200 %}
+        {% assign author = page.author | strip | escape | remove: '\' | truncate: 50 %}
+
+        "title"       : "{{ title }}",
+        "url"         : "{{ url }}",
+        "path"        : "{{ path_parts }}",
+        "date"        : "{{ date }}",
+        "keywords"    : "{{ keywords }}",
+        "description" : "{{ description }}"
+      },
+    {% endunless %}
+  {% endfor %}
+  {}
 ]
