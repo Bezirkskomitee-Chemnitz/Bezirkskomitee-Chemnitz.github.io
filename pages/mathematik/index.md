@@ -5,6 +5,8 @@ permalink: mathematik/
 date: 2022-10-26
 ---
 
+<!-- einführung schreiben -->
+
 # Fördermöglichkeiten
 - an der TU Chemnitz [weitere Informationen](tuc_foerderung)
 - im Korrespondenzzirkel Mathematik (KZM)

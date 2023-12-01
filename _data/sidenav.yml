@@ -7,9 +7,16 @@ faculties:
       url: kzm/
     - title: Mathematikseminar
       url: mathematikseminar/
+    - title: Trainingsmaterial
+      url: material/
 
+      # verschachtelung reduzieren, oberste ebene, unterpunkte für wettbewerbe
     - title: Wettbewerbe
       items:
+        # Wie schreibe ich eine Lösung auf
+        - title: Tipps zur Teilnahme
+          url: tipps-zur-teilnahme/
+      
         - title: Mathematik&shy;olympiade
           url: olympiade/
         - title: Adam-Ries-Wettbewerb
@@ -22,13 +29,11 @@ faculties:
         - title: Bundeswettbewerb Mathematik
           external_url: https://www.mathe-wettbewerbe.de/bundeswettbewerb-mathematik/
 
-    - title: Trainingsmaterial
-      url: material/
     - title: Ranglisten
       url: rankings/
     - title: Inhaltlich Verantwortlicher
       url: verantwortung/
-  
+    
 
   physics:
     - title: Home

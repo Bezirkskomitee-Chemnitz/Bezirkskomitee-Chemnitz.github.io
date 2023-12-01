@@ -4,6 +4,9 @@ permalink: mathematik/olympiade/
 date: 2023-03-06
 ---
 
+<!-- https://www.mathematik-olympiaden.de/moev/aufgaben/aufgabenarchiv-2?view=aufgabenarchiv -->
+<!-- https://www.mathe-wettbewerbe.de/aufgaben#t-mathematik-olympiade -->
+
 **Die Mathematikolympiade ist ein mehrstufiger Wettbewerb. Die Aufgaben aller 4 Wettbewerbsstufen werden vom Aufgabenausschuss des Mathematik-Olympiaden e.V. entworfen und zur Verfügung gestellt.**
 
 # 1. Stufe

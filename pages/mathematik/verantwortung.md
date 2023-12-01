@@ -4,6 +4,8 @@ permalink: mathematik/verantwortung/
 date: 2023-03-06
 ---
 
+<!-- zu kontakteliste umwandeln -->
+
 Die Inhalte dieser Seiten werden (im Rahmen der von den Mitstreitern gelieferten Zuarbeiten) aktualisiert von:
 
 Lutz Pörnig<br>
