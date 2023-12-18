@@ -29,6 +29,10 @@ author: Fabian Bartl
   - [HTML](#html)
   - [Jekyll Templates](#jekyll-templates)
 
+<!-- github tutorial
+- dateien bearbeiten
+- dateien hochladen -->
+
 ## Datei- und Ordnerstruktur verstehen
 
 Hier sehen Sie einen Auszug der Datei- und Orderstruktur der gesamten Webseite: 

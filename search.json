@@ -1,5 +1,4 @@
 ---
-title: search
 layout: compress
 search: exclude
 permalink: /search.json
@@ -65,7 +64,8 @@ permalink: /search.json
         "path"        : "{{ path_parts }}",
         "date"        : "{{ date }}",
         "keywords"    : "{{ keywords }}",
-        "description" : "{{ description }}"
+        "description" : "{{ description }}",
+        "author"      : "{{ author }}"
       },
     {% endunless %}
   {% endfor %}
